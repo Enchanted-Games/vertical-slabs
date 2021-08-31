@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "enchanted-vertical-slabs",
+  "version": "1.0.0",
+
+  "name": "Vertical Slabs",
+  "description": "A simple vanilla like mod that adds Vertical Slabs to minecraft",
+  "authors": [
+    "Enchanted Games"
+  ],
+  "contact": {
+    "homepage": "https://vertical-slabs.enchanted.games",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/enchanted-vertical-slabs/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "games.enchanted.VerticalSlabs"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
