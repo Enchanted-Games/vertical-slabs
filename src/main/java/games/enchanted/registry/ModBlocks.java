@@ -20,6 +20,7 @@ public class ModBlocks{
     public static final Block VERTICAL_ACACIA_SLAB = registerVerticalWoodSlab("vertical_acacia_slab");
     public static final Block VERTICAL_DARK_OAK_SLAB = registerVerticalWoodSlab("vertical_dark_oak_slab");
     public static final Block VERTICAL_CRIMSON_SLAB = registerVerticalNetherWoodSlab("vertical_crimson_slab");
+    public static final Block VERTICAL_WARPED_SLAB = registerVerticalNetherWoodSlab("vertical_warped_slab");
 
     public static Block registerVerticalWoodSlab(String id) {
         final Settings settings = FabricBlockSettings.of(Material.WOOD).strength(2f, 30f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES);
