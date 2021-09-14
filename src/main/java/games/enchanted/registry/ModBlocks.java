@@ -24,6 +24,8 @@ public class ModBlocks{
 
     // stone slabs
     public static final Block VERTICAL_STONE_SLAB = registerVerticalStoneSlab("vertical_stone_slab");
+    public static final Block VERTICAL_SMOOTH_STONE_SLAB = registerVerticalStoneSlab("vertical_smooth_stone_slab");
+    public static final Block VERTICAL_SANDSTONE_SLAB = registerVerticalStoneSlab("vertical_sandstone_slab");
 
     public static Block registerVerticalWoodSlab(String id) {
         final Settings settings = FabricBlockSettings.of(Material.WOOD).strength(2f, 30f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES);

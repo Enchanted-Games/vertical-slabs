@@ -10,5 +10,7 @@
     "block.enchanted-vertical-slabs.vertical_crimson_slab": "Vertical Crimson Slab",
     "block.enchanted-vertical-slabs.vertical_warped_slab": "Vertical Warped Slab",
     
-    "block.enchanted-vertical-slabs.vertical_stone_slab": "Vertical Stone Slab"
+    "block.enchanted-vertical-slabs.vertical_stone_slab": "Vertical Stone Slab",
+    "block.enchanted-vertical-slabs.vertical_smooth_stone_slab": "Vertical Smooth Stone Slab",
+    "block.enchanted-vertical-slabs.vertical_sandstone_slab": "Vertical Sandstone Slab"
 }

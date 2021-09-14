@@ -23,6 +23,8 @@ public class ModItems {
     
     // stone slabs
     public static final BlockItem VERTICAL_STONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_STONE_SLAB ,"vertical_stone_slab");
+    public static final BlockItem VERTICAL_SMOOTH_STONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB ,"vertical_smooth_stone_slab");
+    public static final BlockItem VERTICAL_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SANDSTONE_SLAB ,"vertical_sandstone_slab");
 
     public static BlockItem registerBlockItem(Block blockId ,String id) {
         Item.Settings settings = new Item.Settings().group(ItemGroup.BUILDING_BLOCKS);
