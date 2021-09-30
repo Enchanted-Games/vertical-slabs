@@ -1,3 +1,3 @@
 # vertical-slabs
 vertical slabs fabric mod
-adds vertical slabs and possibly some other things to minecraft
+since you found this you can build it (if you know how) to try it out early
