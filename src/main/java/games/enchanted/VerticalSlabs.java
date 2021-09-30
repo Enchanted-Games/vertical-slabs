@@ -28,6 +28,18 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_STONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_SMOOTH_STONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_SANDSTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_CUT_SANDSTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_PETRIFIED_OAK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_COBBLESTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_STONE_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_NETHER_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_QUARTZ_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_PURPUR_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_PRISMARINE_SLAB));
         }
     ).build();
 

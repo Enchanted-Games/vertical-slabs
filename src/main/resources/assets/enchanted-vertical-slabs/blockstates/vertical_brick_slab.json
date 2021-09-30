@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "enchanted-vertical-slabs:block/vertical_brick_slab",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=east": {
+      "model": "enchanted-vertical-slabs:block/vertical_brick_slab",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=south": {
+      "model": "enchanted-vertical-slabs:block/vertical_brick_slab",
+      "uvlock": true
+    },
+    "facing=west": {
+      "model": "enchanted-vertical-slabs:block/vertical_brick_slab",
+      "y": 90,
+      "uvlock": true
+    }
+  }
+}

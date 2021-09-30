@@ -12,5 +12,17 @@
     
     "block.enchanted-vertical-slabs.vertical_stone_slab": "Vertical Stone Slab",
     "block.enchanted-vertical-slabs.vertical_smooth_stone_slab": "Vertical Smooth Stone Slab",
-    "block.enchanted-vertical-slabs.vertical_sandstone_slab": "Vertical Sandstone Slab"
+    "block.enchanted-vertical-slabs.vertical_sandstone_slab": "Vertical Sandstone Slab",
+    "block.enchanted-vertical-slabs.vertical_cut_sandstone_slab": "Vertical Cut Sandstone Slab",
+    "block.enchanted-vertical-slabs.vertical_petrified_oak_slab": "Vertical Petrified Oak Slab",
+    "block.enchanted-vertical-slabs.vertical_cobblestone_slab": "Vertical Cobblestone Slab",
+    "block.enchanted-vertical-slabs.vertical_brick_slab": "Vertical Brick Slab",
+    "block.enchanted-vertical-slabs.vertical_stone_brick_slab": "Vertical Stone Brick Slab",
+    "block.enchanted-vertical-slabs.vertical_nether_brick_slab": "Vertical Nether Brick Slab",
+    "block.enchanted-vertical-slabs.vertical_quartz_slab": "Vertical Quartz Slab",
+    "block.enchanted-vertical-slabs.vertical_smooth_quartz_slab": "Vertical Smooth Quartz Slab",
+    "block.enchanted-vertical-slabs.vertical_red_sandstone_slab": "Vertical Red Sandstone Slab",
+    "block.enchanted-vertical-slabs.vertical_cut_red_sandstone_slab": "Vertical Cut Red Sandstone Slab",
+    "block.enchanted-vertical-slabs.vertical_purpur_slab": "Vertical Purpur Slab",
+    "block.enchanted-vertical-slabs.vertical_prismarine_slab": "Vertical Prismarine Slab"
 }
