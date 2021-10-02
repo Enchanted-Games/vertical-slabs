@@ -38,6 +38,7 @@ public class ModItems {
     public static final BlockItem VERTICAL_PURPUR_SLAB = registerBlockItem(ModBlocks.VERTICAL_PURPUR_SLAB ,"vertical_purpur_slab");
     public static final BlockItem VERTICAL_PRISMARINE_SLAB = registerBlockItem(ModBlocks.VERTICAL_PRISMARINE_SLAB ,"vertical_prismarine_slab");
 
+    // registers all block items and puts them in building blocks
     public static BlockItem registerBlockItem(Block blockId ,String id) {
         Item.Settings settings = new Item.Settings().group(ItemGroup.BUILDING_BLOCKS);
         return Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, id), new VerticalSlabItem(blockId, settings));

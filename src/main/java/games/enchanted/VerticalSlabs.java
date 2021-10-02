@@ -10,12 +10,15 @@ import net.minecraft.util.Identifier;
 
 public class VerticalSlabs implements ModInitializer{
 
+    // mod id
     public static final String MOD_ID = "enchanted-vertical-slabs";
 
     // creative tabs
     public static final ItemGroup VERTICAL_SLABS_GROUP = FabricItemGroupBuilder.create(
         new Identifier(MOD_ID, "vertical_slabs"))
+        // group icon
         .icon(() -> new ItemStack(ModItems.VERTICAL_OAK_SLAB))
+        // items in the group
         .appendItems(stacks -> {
             stacks.add(new ItemStack(ModBlocks.VERTICAL_OAK_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_SPRUCE_SLAB));
@@ -45,6 +48,7 @@ public class VerticalSlabs implements ModInitializer{
 
     @Override
     public void onInitialize() {
+        // calls block and item classes
         ModItems.registerItems();
         ModBlocks.registerBlocks();
     }
