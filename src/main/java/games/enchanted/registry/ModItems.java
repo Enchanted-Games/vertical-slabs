@@ -37,6 +37,14 @@ public class ModItems {
     public static final BlockItem VERTICAL_CUT_RED_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB ,"vertical_cut_red_sandstone_slab");
     public static final BlockItem VERTICAL_PURPUR_SLAB = registerBlockItem(ModBlocks.VERTICAL_PURPUR_SLAB ,"vertical_purpur_slab");
     public static final BlockItem VERTICAL_PRISMARINE_SLAB = registerBlockItem(ModBlocks.VERTICAL_PRISMARINE_SLAB ,"vertical_prismarine_slab");
+    public static final BlockItem VERTICAL_PRISMARINE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB ,"vertical_prismarine_brick_slab");
+    public static final BlockItem VERTICAL_DARK_PRISMARINE__SLAB = registerBlockItem(ModBlocks.VERTICAL_DARK_PRISMARINE__SLAB ,"vertical_dark_prismarine_slab");
+    public static final BlockItem VERTICAL_POLISHED_GRANITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB ,"vertical_polished_granite_slab");
+    public static final BlockItem VERTICAL_SMOOTH_RED_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB ,"vertical_smooth_red_sandstone_slab");
+    public static final BlockItem VERTICAL_MOSSY_STONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB ,"vertical_mossy_stone_brick_slab");
+
+
+    public static final BlockItem TEST_BLOCKSTATE = registerBlockItem(ModBlocks.TEST_BLOCKSTATE ,"test_blockstate");
 
     // registers all block items and puts them in building blocks
     public static BlockItem registerBlockItem(Block blockId ,String id) {

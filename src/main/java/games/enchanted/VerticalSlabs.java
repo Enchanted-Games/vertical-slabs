@@ -4,6 +4,7 @@ import games.enchanted.registry.ModItems;
 import games.enchanted.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -43,12 +44,18 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_PURPUR_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_PRISMARINE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_DARK_PRISMARINE__SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.TEST_BLOCKSTATE));
         }
     ).build();
 
     @Override
     public void onInitialize() {
-        // calls block and item classes
+        // calls block and item classes to register blocks and stuff
         ModItems.registerItems();
         ModBlocks.registerBlocks();
     }

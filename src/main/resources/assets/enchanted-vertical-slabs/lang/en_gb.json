@@ -24,5 +24,10 @@
     "block.enchanted-vertical-slabs.vertical_red_sandstone_slab": "Vertical Red Sandstone Slab",
     "block.enchanted-vertical-slabs.vertical_cut_red_sandstone_slab": "Vertical Cut Red Sandstone Slab",
     "block.enchanted-vertical-slabs.vertical_purpur_slab": "Vertical Purpur Slab",
-    "block.enchanted-vertical-slabs.vertical_prismarine_slab": "Vertical Prismarine Slab"
+    "block.enchanted-vertical-slabs.vertical_prismarine_slab": "Vertical Prismarine Slab",
+    "block.enchanted-vertical-slabs.vertical_prismarine_brick_slab": "Vertical Prismarine Brick Slab",
+    "block.enchanted-vertical-slabs.vertical_dark_prismarine_slab": "Vertical Dark Prismarine Slab",
+    "block.enchanted-vertical-slabs.vertical_polished_granite_slab": "Vertical Polished Granite Slab",
+    "block.enchanted-vertical-slabs.vertical_smooth_red_sandstone_slab": "Vertical Smooth Red Sandstone Slab",
+    "block.enchanted-vertical-slabs.vertical_mossy_stone_brick_slab": "Vertical Mossy Stone Brick Slab"
 }
