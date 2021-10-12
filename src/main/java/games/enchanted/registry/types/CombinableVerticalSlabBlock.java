@@ -53,19 +53,6 @@ public class TestType extends HorizontalFacingBlock {
 
     }
 
-
-    /*@Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if(player.isHolding(ModItems.TEST_BLOCKSTATE) ){
-            player.playSound(SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, 1, 1);
-            world.setBlockState(pos, state.with(SINGLE, true));
-        }else{
-
-        }
-
-        return ActionResult.CONSUME_PARTIAL;
-    }*/
-
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         // checks if player clicked on block with same item type
