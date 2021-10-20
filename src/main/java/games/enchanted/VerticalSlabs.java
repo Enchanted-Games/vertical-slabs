@@ -4,15 +4,20 @@ import games.enchanted.registry.ModItems;
 import games.enchanted.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class VerticalSlabs implements ModInitializer{
 
     // mod id
     public static final String MOD_ID = "enchanted-vertical-slabs";
+    // logger
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     // creative tabs
     public static final ItemGroup VERTICAL_SLABS_GROUP = FabricItemGroupBuilder.create(
@@ -49,7 +54,6 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB));
-            stacks.add(new ItemStack(ModBlocks.TEST_BLOCKSTATE));
         }
     ).build();
 

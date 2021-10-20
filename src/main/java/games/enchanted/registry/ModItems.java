@@ -44,8 +44,6 @@ public class ModItems {
     public static final BlockItem VERTICAL_MOSSY_STONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB ,"vertical_mossy_stone_brick_slab");
 
 
-    public static final BlockItem TEST_BLOCKSTATE = registerBlockItem(ModBlocks.TEST_BLOCKSTATE ,"test_blockstate");
-
     // registers all block items and puts them in building blocks
     public static BlockItem registerBlockItem(Block blockId ,String id) {
         Item.Settings settings = new Item.Settings().group(ItemGroup.BUILDING_BLOCKS);
