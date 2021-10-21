@@ -1,5 +1,5 @@
 {
-    "itemGroup.enchanted-vertical-slabs.vertical_slabs": "Vertical Slabs",
+    "itemGroup.enchanted-vertical-slabs.vertical_slabs": "\u00A7fVertical Slabs",
     
     "block.enchanted-vertical-slabs.vertical_oak_slab": "Vertical Oak Slab",
     "block.enchanted-vertical-slabs.vertical_spruce_slab": "Vertical Spruce Slab",
@@ -29,5 +29,22 @@
     "block.enchanted-vertical-slabs.vertical_dark_prismarine_slab": "Vertical Dark Prismarine Slab",
     "block.enchanted-vertical-slabs.vertical_polished_granite_slab": "Vertical Polished Granite Slab",
     "block.enchanted-vertical-slabs.vertical_smooth_red_sandstone_slab": "Vertical Smooth Red Sandstone Slab",
-    "block.enchanted-vertical-slabs.vertical_mossy_stone_brick_slab": "Vertical Mossy Stone Brick Slab"
+    "block.enchanted-vertical-slabs.vertical_mossy_stone_brick_slab": "Vertical Mossy Stone Brick Slab",
+
+    "block.enchanted-vertical-slabs.vertical_polished_diorite_slab": "Vertical Polished Diorite Slab",
+    "block.enchanted-vertical-slabs.vertical_mossy_cobblestone_slab": "Vertical Mossy Cobblestone Slab",
+    "block.enchanted-vertical-slabs.vertical_end_stone_brick_slab": "Vertical End Stone Brick Slab",
+    "block.enchanted-vertical-slabs.vertical_smooth_sandstone_slab": "Vertical Smooth Sandstone Slab",
+    "block.enchanted-vertical-slabs.vertical_granite_slab": "Vertical Granite Slab",
+    "block.enchanted-vertical-slabs.vertical_andesite_slab": "Vertical Andesite Slab",
+    "block.enchanted-vertical-slabs.vertical_red_nether_brick_slab": "Vertical Red Nether Brick Slab",
+    "block.enchanted-vertical-slabs.vertical_polished_andesite_slab": "Vertical Polished Andesite Slab",
+    "block.enchanted-vertical-slabs.vertical_diorite_slab": "Vertical Diorite Slab",
+    "block.enchanted-vertical-slabs.vertical_cobbled_deepslate_slab": "Vertical Cobbled Deepslate Slab",
+    "block.enchanted-vertical-slabs.vertical_polished_deepslate_slab": "Vertical Polished Deepslate Slab",
+    "block.enchanted-vertical-slabs.vertical_deepslate_brick_slab": "Vertical Deepslate Brick Slab",
+    "block.enchanted-vertical-slabs.vertical_deepslate_tile_slab": "Vertical Deepslate Tile Slab",
+    "block.enchanted-vertical-slabs.vertical_blackstone_slab": "Vertical Blackstone Slab",
+    "block.enchanted-vertical-slabs.vertical_polished_blackstone_slab": "Vertical Polished Blackstone Slab",
+    "block.enchanted-vertical-slabs.vertical_polished_blackstone_brick_slab": "Vertical Polished Blackstone Brick Slab"
 }

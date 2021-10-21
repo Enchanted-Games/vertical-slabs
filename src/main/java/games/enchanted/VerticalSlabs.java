@@ -1,11 +1,10 @@
 package games.enchanted;
 
+import games.enchanted.registry.ModFlammableBlocks;
 import games.enchanted.registry.ModItems;
 import games.enchanted.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -44,7 +43,6 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_STONE_BRICK_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_NETHER_BRICK_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_QUARTZ_SLAB));
-            stacks.add(new ItemStack(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_CUT_RED_SANDSTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_PURPUR_SLAB));
@@ -54,14 +52,37 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHEED_DIORITE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_ENDSTONE_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_GRANITE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_ANDESITE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_DIORITE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_BLACKSTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB));
         }
     ).build();
 
     @Override
     public void onInitialize() {
-        // calls block and item classes to register blocks and stuff
+        // calls block and item classes to register blocks and items
         ModItems.registerItems();
         ModBlocks.registerBlocks();
+
+        // registers flammable blocks
+        ModFlammableBlocks.registerFlammables();
+
+        // logs to console that the mod is ready
+        LOGGER.info("Enchanted Games Mod: " + MOD_ID + " initialized!");
     }
     
 }

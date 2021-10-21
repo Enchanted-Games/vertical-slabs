@@ -92,8 +92,8 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock {
 
             ActionResult RESULT = ActionResult.FAIL;
             player.getBlockX();
-            LOGGER.info("VERTICAL SLAB");
-            /*LOGGER.info(player.getBlockX());
+            /*LOGGER.info("VERTICAL SLAB");
+            LOGGER.info(player.getBlockX());
             LOGGER.info(player.getBlockY());
             LOGGER.info(player.getBlockZ());
             LOGGER.info(hit.getSide());*/
@@ -104,7 +104,6 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock {
                 // is facing north and hit from south
                 if(state.get(FACING) == Direction.NORTH){
                     if(HITSIDE == Direction.SOUTH){
-                        LOGGER.info("scucces");
                         world.setBlockState(pos, state.with(SINGLE, false));
                         RESULT = sucessfulPlace(player, hand, world, pos);
                     }
@@ -112,7 +111,6 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock {
                 // is facing east and hit from west
                 else if(state.get(FACING) == Direction.EAST){
                     if(HITSIDE == Direction.WEST){
-                        LOGGER.info("scucces");
                         world.setBlockState(pos, state.with(SINGLE, false));
                         RESULT = sucessfulPlace(player, hand, world, pos);
                     }
@@ -120,7 +118,6 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock {
                 // is facing south and hit from north
                 else if(state.get(FACING) == Direction.SOUTH){
                     if(HITSIDE == Direction.NORTH){
-                        LOGGER.info("scucces");
                         world.setBlockState(pos, state.with(SINGLE, false));
                         RESULT = sucessfulPlace(player, hand, world, pos);
                     }
@@ -128,14 +125,13 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock {
                 // is facing west and hit from east
                 else if(state.get(FACING) == Direction.WEST){
                     if(HITSIDE == Direction.EAST){
-                        LOGGER.info("scucces");
                         world.setBlockState(pos, state.with(SINGLE, false));
                         RESULT = sucessfulPlace(player, hand, world, pos);
                     }
                 }
 
                 else{
-                    RESULT = ActionResult.FAIL;
+
                 }
 
             }

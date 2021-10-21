@@ -45,24 +45,60 @@ public class ModBlocks{
     public static final Block VERTICAL_SMOOTH_RED_SANDSTONE_SLAB = registerVerticalStoneSlab("vertical_smooth_red_sandstone_slab");
     public static final Block VERTICAL_MOSSY_STONE_BRICK_SLAB = registerVerticalStoneSlab("vertical_mossy_stone_brick_slab");
 
+    public static final Block VERTICAL_POLISHEED_DIORITE_SLAB = registerVerticalStoneSlab("vertical_polished_diorite_slab");
+    public static final Block VERTICAL_MOSSY_COBBLESTONE_SLAB = registerVerticalStoneSlab("vertical_mossy_cobblestone_slab");
+    public static final Block VERTICAL_ENDSTONE_BRICK_SLAB = registerVerticalStoneSlab("vertical_end_stone_brick_slab");
+    public static final Block VERTICAL_SMOOTH_SANDSTONE_SLAB = registerVerticalStoneSlab("vertical_smooth_sandstone_slab");
+    public static final Block VERTICAL_GRANITE_SLAB = registerVerticalStoneSlab("vertical_granite_slab");
+    public static final Block VERTICAL_ANDESITE_SLAB = registerVerticalStoneSlab("vertical_andesite_slab");
+    public static final Block VERTICAL_RED_NETHER_BRICK_SLAB = registerVerticalNetherBrickSlab("vertical_red_nether_brick_slab");
+    public static final Block VERTICAL_POLISHED_ANDESITE_SLAB = registerVerticalStoneSlab("vertical_polished_andesite_slab");
+    public static final Block VERTICAL_DIORITE_SLAB = registerVerticalStoneSlab("vertical_diorite_slab");
+    public static final Block VERTICAL_COBBLED_DEEPSLATE_SLAB = registerVerticalDeepslateSlab("vertical_cobbled_deepslate_slab");
+    public static final Block VERTICAL_POLISHED_DEEPSLATE_SLAB = registerVerticalDeepslateSlab("vertical_polished_deepslate_slab");
+    public static final Block VERTICAL_DEEPSLATE_BRICK_SLAB = registerVerticalDeepslateBrickSlab("vertical_deepslate_brick_slab");
+    public static final Block VERTICAL_DEEPSLATE_TILE_SLAB = registerVerticalDeepslateTileSlab("vertical_deepslate_tile_slab");
+    public static final Block VERTICAL_BLACKSTONE_SLAB = registerVerticalBlackstoneSlab("vertical_blackstone_slab");
+    public static final Block VERTICAL_POLISHED_BLACKSTONE_SLAB = registerVerticalBlackstoneSlab("vertical_polished_blackstone_slab");
+    public static final Block VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB = registerVerticalBlackstoneSlab("vertical_polished_blackstone_brick_slab");
+
 
     // slab types
     public static Block registerVerticalWoodSlab(String id) {
-        final Settings settings = FabricBlockSettings.of(Material.WOOD).strength(2f, 30f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES);
+        final Settings settings = FabricBlockSettings.of(Material.WOOD).strength(2f, 6f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES);
         return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_WOOD_PLACE));
+
     }
     public static Block registerVerticalNetherWoodSlab(String id) {
-        final Settings settings = FabricBlockSettings.of(Material.NETHER_WOOD).strength(2f, 30f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES);
+        final Settings settings = FabricBlockSettings.of(Material.NETHER_WOOD).strength(2f, 6f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES);
         return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_WOOD_PLACE));
     }
     public static Block registerVerticalStoneSlab(String id) {
-        final Settings settings = FabricBlockSettings.of(Material.STONE).strength(2f, 30f).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES);
+        final Settings settings = FabricBlockSettings.of(Material.STONE).strength(2f, 6f).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES);
         return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_STONE_PLACE));
     }
     public static Block registerVerticalNetherBrickSlab(String id) {
-        final Settings settings = FabricBlockSettings.of(Material.STONE).strength(2f, 30f).sounds(BlockSoundGroup.NETHER_BRICKS).breakByTool(FabricToolTags.PICKAXES);
+        final Settings settings = FabricBlockSettings.of(Material.STONE).strength(2f, 6f).sounds(BlockSoundGroup.NETHER_BRICKS).breakByTool(FabricToolTags.PICKAXES);
         return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_NETHER_BRICKS_PLACE));
     }
+    public static Block registerVerticalDeepslateSlab(String id) {
+        final Settings settings = FabricBlockSettings.of(Material.STONE).strength(3.5f, 6f).sounds(BlockSoundGroup.DEEPSLATE).breakByTool(FabricToolTags.PICKAXES);
+        return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_DEEPSLATE_PLACE));
+    }
+    public static Block registerVerticalDeepslateBrickSlab(String id) {
+        final Settings settings = FabricBlockSettings.of(Material.STONE).strength(3.5f, 6f).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).breakByTool(FabricToolTags.PICKAXES);
+        return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_DEEPSLATE_BRICKS_PLACE));
+    }
+    public static Block registerVerticalDeepslateTileSlab(String id) {
+        final Settings settings = FabricBlockSettings.of(Material.STONE).strength(3.5f, 6f).sounds(BlockSoundGroup.DEEPSLATE_TILES).breakByTool(FabricToolTags.PICKAXES);
+        return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_DEEPSLATE_TILES_PLACE));
+    }
+    public static Block registerVerticalBlackstoneSlab(String id) {
+        final Settings settings = FabricBlockSettings.of(Material.STONE).strength(2f, 6f).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES);
+        return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_STONE_PLACE));
+    }
+
+
 
     public static void registerBlocks(){
         

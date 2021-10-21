@@ -42,6 +42,23 @@ public class ModItems {
     public static final BlockItem VERTICAL_POLISHED_GRANITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB ,"vertical_polished_granite_slab");
     public static final BlockItem VERTICAL_SMOOTH_RED_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB ,"vertical_smooth_red_sandstone_slab");
     public static final BlockItem VERTICAL_MOSSY_STONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB ,"vertical_mossy_stone_brick_slab");
+    public static final BlockItem VERTICAL_POLISHEED_DIORITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHEED_DIORITE_SLAB ,"vertical_polished_diorite_slab");
+    public static final BlockItem VERTICAL_MOSSY_COBBLESTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB ,"vertical_mossy_cobblestone_slab");
+    public static final BlockItem VERTICAL_ENDSTONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_ENDSTONE_BRICK_SLAB ,"vertical_end_stone_brick_slab");
+    public static final BlockItem VERTICAL_SMOOTH_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB ,"vertical_smooth_sandstone_slab");
+    public static final BlockItem VERTICAL_GRANITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_GRANITE_SLAB ,"vertical_granite_slab");
+    public static final BlockItem VERTICAL_ANDESITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_ANDESITE_SLAB ,"vertical_andesite_slab");
+    public static final BlockItem VERTICAL_RED_NETHER_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_RED_NETHER_BRICK_SLAB ,"vertical_red_nether_brick_slab");
+    public static final BlockItem VERTICAL_POLISHED_ANDESITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_ANDESITE_SLAB ,"vertical_polished_andesite_slab");
+    public static final BlockItem VERTICAL_DIORITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_DIORITE_SLAB ,"vertical_diorite_slab");
+    public static final BlockItem VERTICAL_COBBLED_DEEPSLATE_SLAB = registerBlockItem(ModBlocks.VERTICAL_COBBLED_DEEPSLATE_SLAB ,"vertical_cobbled_deepslate_slab");
+    public static final BlockItem VERTICAL_POLISHED_DEEPSLATE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_DEEPSLATE_SLAB ,"vertical_polished_deepslate_slab");
+    public static final BlockItem VERTICAL_DEEPSLATE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_DEEPSLATE_BRICK_SLAB ,"vertical_deepslate_brick_slab");
+    public static final BlockItem VERTICAL_DEEPSLATE_TILE_SLAB = registerBlockItem(ModBlocks.VERTICAL_DEEPSLATE_TILE_SLAB ,"vertical_deepslate_tile_slab");
+    public static final BlockItem VERTICAL_BLACKSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_BLACKSTONE_SLAB ,"vertical_blackstone_slab");
+    public static final BlockItem VERTICAL_POLISHED_BLACKSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB ,"vertical_polished_blackstone_slab");
+    public static final BlockItem VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB ,"vertical_polished_blackstone_brick_slab");
+
 
 
     // registers all block items and puts them in building blocks
