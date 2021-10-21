@@ -1,4 +1,4 @@
 # vertical-slabs
 vertical slabs fabric mod
 
-currently about 30% complete
+currently about 35% complete
