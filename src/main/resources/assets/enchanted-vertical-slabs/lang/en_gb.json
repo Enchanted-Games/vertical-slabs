@@ -1,6 +1,6 @@
 {
     "itemGroup.enchanted-vertical-slabs.vertical_slabs": "\u00A7fVertical Slabs",
-    
+
     "block.enchanted-vertical-slabs.vertical_oak_slab": "Vertical Oak Slab",
     "block.enchanted-vertical-slabs.vertical_spruce_slab": "Vertical Spruce Slab",
     "block.enchanted-vertical-slabs.vertical_birch_slab": "Vertical Birch Slab",
@@ -9,7 +9,7 @@
     "block.enchanted-vertical-slabs.vertical_dark_oak_slab": "Vertical Dark Oak Slab",
     "block.enchanted-vertical-slabs.vertical_crimson_slab": "Vertical Crimson Slab",
     "block.enchanted-vertical-slabs.vertical_warped_slab": "Vertical Warped Slab",
-    
+
     "block.enchanted-vertical-slabs.vertical_stone_slab": "Vertical Stone Slab",
     "block.enchanted-vertical-slabs.vertical_smooth_stone_slab": "Vertical Smooth Stone Slab",
     "block.enchanted-vertical-slabs.vertical_sandstone_slab": "Vertical Sandstone Slab",
@@ -46,5 +46,11 @@
     "block.enchanted-vertical-slabs.vertical_deepslate_tile_slab": "Vertical Deepslate Tile Slab",
     "block.enchanted-vertical-slabs.vertical_blackstone_slab": "Vertical Blackstone Slab",
     "block.enchanted-vertical-slabs.vertical_polished_blackstone_slab": "Vertical Polished Blackstone Slab",
-    "block.enchanted-vertical-slabs.vertical_polished_blackstone_brick_slab": "Vertical Polished Blackstone Brick Slab"
+    "block.enchanted-vertical-slabs.vertical_polished_blackstone_brick_slab": "Vertical Polished Blackstone Brick Slab",
+
+    "block.enchanted-vertical-slabs.vertical_cut_copper_slab": "Vertical Cut Copper Slab",
+    "block.enchanted-vertical-slabs.vertical_exposed_cut_copper_slab": "Vertical Exposed Cut Copper Slab",
+    "block.enchanted-vertical-slabs.vertical_weathered_cut_copper_slab": "Vertical Weathered Cut Copper Slab",
+    "block.enchanted-vertical-slabs.vertical_oxidized_cut_copper_slab": "Vertical Oxidised Cut Copper Slab"
+
 }

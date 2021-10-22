@@ -59,6 +59,11 @@ public class ModItems {
     public static final BlockItem VERTICAL_POLISHED_BLACKSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB ,"vertical_polished_blackstone_slab");
     public static final BlockItem VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB ,"vertical_polished_blackstone_brick_slab");
 
+    public static final BlockItem VERTICAL_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_CUT_COPPER_SLAB ,"vertical_cut_copper_slab");
+    public static final BlockItem VERTICAL_EXPOSED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB ,"vertical_exposed_cut_copper_slab");
+    public static final BlockItem VERTICAL_WEATHERED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB ,"vertical_weathered_cut_copper_slab");
+    public static final BlockItem VERTICAL_OXIDIZED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB ,"vertical_oxidized_cut_copper_slab");
+
 
 
     // registers all block items and puts them in building blocks
@@ -68,6 +73,6 @@ public class ModItems {
     }
 
     public static void registerItems(){
-        //Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, "vertical_oak_slab"), VERTICAL_OAK_SLAB);
+        //Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, "vertical_oak_slab.json"), VERTICAL_OAK_SLAB);
     }
 }

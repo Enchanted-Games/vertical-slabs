@@ -1,11 +1,14 @@
 package games.enchanted.registry;
 
+import com.google.gson.JsonObject;
 import games.enchanted.VerticalSlabs;
+import games.enchanted.registry.recipes.BlockRecipes;
+import games.enchanted.registry.recipes.RecipeMixin;
 import games.enchanted.registry.types.CombinableVerticalSlabBlock;
+import games.enchanted.registry.types.OxidizableVerticalSlab;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
@@ -62,12 +65,19 @@ public class ModBlocks{
     public static final Block VERTICAL_POLISHED_BLACKSTONE_SLAB = registerVerticalBlackstoneSlab("vertical_polished_blackstone_slab");
     public static final Block VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB = registerVerticalBlackstoneSlab("vertical_polished_blackstone_brick_slab");
 
+    public static final Block VERTICAL_CUT_COPPER_SLAB = registerVerticalCopperSlab("vertical_cut_copper_slab");
+    public static final Block VERTICAL_EXPOSED_CUT_COPPER_SLAB = registerVerticalCopperSlab("vertical_exposed_cut_copper_slab");
+    public static final Block VERTICAL_WEATHERED_CUT_COPPER_SLAB = registerVerticalCopperSlab("vertical_weathered_cut_copper_slab");
+    public static final Block VERTICAL_OXIDIZED_CUT_COPPER_SLAB = registerVerticalCopperSlab("vertical_oxidized_cut_copper_slab");
 
+    // block registry
+    private static Block register(String id, Block block) {
+        return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), block);
+    }
     // slab types
     public static Block registerVerticalWoodSlab(String id) {
         final Settings settings = FabricBlockSettings.of(Material.WOOD).strength(2f, 6f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES);
         return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_WOOD_PLACE));
-
     }
     public static Block registerVerticalNetherWoodSlab(String id) {
         final Settings settings = FabricBlockSettings.of(Material.NETHER_WOOD).strength(2f, 6f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES);
@@ -97,7 +107,10 @@ public class ModBlocks{
         final Settings settings = FabricBlockSettings.of(Material.STONE).strength(2f, 6f).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES);
         return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_STONE_PLACE));
     }
-
+    public static Block registerVerticalCopperSlab(String id) {
+        final Settings settings = FabricBlockSettings.of(Material.METAL).strength(3f, 6f).sounds(BlockSoundGroup.COPPER).breakByTool(FabricToolTags.PICKAXES);
+        return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_COPPER_PLACE));
+    }
 
 
     public static void registerBlocks(){
