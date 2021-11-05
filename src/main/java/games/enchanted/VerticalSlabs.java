@@ -25,6 +25,10 @@ public class VerticalSlabs implements ModInitializer{
         .icon(() -> new ItemStack(ModItems.VERTICAL_OAK_SLAB))
         // items in the group
         .appendItems(stacks -> {
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_CUT_COPPER_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_OAK_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_SPRUCE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_BIRCH_SLAB));
@@ -70,10 +74,6 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB));
 
-            stacks.add(new ItemStack(ModBlocks.VERTICAL_CUT_COPPER_SLAB));
-            stacks.add(new ItemStack(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB));
-            stacks.add(new ItemStack(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB));
-            stacks.add(new ItemStack(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB));
         }
     ).build();
 

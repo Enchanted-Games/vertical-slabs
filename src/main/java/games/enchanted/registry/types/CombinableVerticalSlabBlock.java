@@ -1,16 +1,11 @@
 package games.enchanted.registry.types;
 
-import com.google.common.base.Supplier;
-import games.enchanted.registry.ModBlocks;
 import net.minecraft.block.*;
-import net.minecraft.client.sound.SoundExecutor;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -24,7 +19,6 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-import java.sql.Array;
 
 public class CombinableVerticalSlabBlock extends HorizontalFacingBlock {
     public static final BooleanProperty SINGLE = BooleanProperty.of("single_slab");
