@@ -1,5 +1,5 @@
 package games.enchanted.registry.types;
-
+/*
 import java.util.Random;
 
 import net.minecraft.block.AbstractBlock;
@@ -9,10 +9,11 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 
-public class OxidizableVerticalSlab extends CombinableVerticalSlabBlock implements Oxidizable {
-    private final Oxidizable.OxidizationLevel oxidizationLevel;
 
-    public OxidizableVerticalSlab(Oxidizable.OxidizationLevel oxidizationLevel, AbstractBlock.Settings settings, SoundEvent blockSoundEvent) {
+public class OxidizableVerticalSlab extends CombinableVerticalSlabBlock implements Oxidizable {
+    private final OxidationLevel oxidizationLevel;
+
+    public OxidizableVerticalSlab(OxidationLevel oxidizationLevel, AbstractBlock.Settings settings, SoundEvent blockSoundEvent) {
         super(settings, blockSoundEvent);
         this.oxidizationLevel = oxidizationLevel;
     }
@@ -25,7 +26,13 @@ public class OxidizableVerticalSlab extends CombinableVerticalSlabBlock implemen
         return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
 
-    public Oxidizable.OxidizationLevel getDegradationLevel() {
+    public OxidationLevel getDegradationLevel() {
         return this.oxidizationLevel;
     }
-}
+
+    @Override
+    public OxidationLevel getDegradationLevel() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+}*/

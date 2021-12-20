@@ -4,12 +4,12 @@
   "version": "1.0.0",
 
   "name": "Vertical Slabs",
-  "description": "A simple mod that adds Vertical Slabs to minecraft",
+  "description": "A simple mod that adds Vertical Slabs to Minecraft",
   "authors": [
     "Enchanted Games"
   ],
   "contact": {
-    "homepage": "https://vertical-slabs.enchanted.games",
+    "homepage": "https://verticalslabs.enchanted.games",
     "sources": "https://github.com/Enchanted-Games/vertical-slabs"
   },
 

@@ -2,6 +2,7 @@ package games.enchanted.registry;
 
 import games.enchanted.VerticalSlabs;
 import games.enchanted.registry.types.CombinableVerticalSlabBlock;
+import io.netty.util.SuppressForbidden;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
