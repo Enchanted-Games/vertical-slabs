@@ -3,14 +3,15 @@
   "id": "enchanted-vertical-slabs",
   "version": "1.0.0",
 
-  "name": "Vertical Slabs",
+  "name": "Enchanted Vertical Slabs",
   "description": "A simple mod that adds Vertical Slabs to Minecraft",
   "authors": [
     "Enchanted Games"
   ],
   "contact": {
     "homepage": "https://verticalslabs.enchanted.games",
-    "sources": "https://github.com/Enchanted-Games/vertical-slabs"
+    "sources": "https://github.com/Enchanted-Games/vertical-slabs",
+    "issues": "https://github.com/Enchanted-Games/vertical-slabs/issues"
   },
 
   "license": "CC0-1.0",
