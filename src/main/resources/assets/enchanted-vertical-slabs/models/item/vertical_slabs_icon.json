@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "enchanted-vertical-slabs:item/vertical_slabs_icon"
+    }
+}

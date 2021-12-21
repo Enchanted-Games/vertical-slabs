@@ -45,7 +45,7 @@ public class ModBlocks{
     public static final Block VERTICAL_SMOOTH_RED_SANDSTONE_SLAB = registerVerticalStoneSlab("vertical_smooth_red_sandstone_slab");
     public static final Block VERTICAL_MOSSY_STONE_BRICK_SLAB = registerVerticalStoneSlab("vertical_mossy_stone_brick_slab");
 
-    public static final Block VERTICAL_POLISHEED_DIORITE_SLAB = registerVerticalStoneSlab("vertical_polished_diorite_slab");
+    public static final Block VERTICAL_POLISHED_DIORITE_SLAB = registerVerticalStoneSlab("vertical_polished_diorite_slab");
     public static final Block VERTICAL_MOSSY_COBBLESTONE_SLAB = registerVerticalStoneSlab("vertical_mossy_cobblestone_slab");
     public static final Block VERTICAL_ENDSTONE_BRICK_SLAB = registerVerticalStoneSlab("vertical_end_stone_brick_slab");
     public static final Block VERTICAL_SMOOTH_SANDSTONE_SLAB = registerVerticalStoneSlab("vertical_smooth_sandstone_slab");

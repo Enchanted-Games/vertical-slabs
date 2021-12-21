@@ -3,6 +3,7 @@ package games.enchanted.registry;
 import games.enchanted.VerticalSlabs;
 import games.enchanted.registry.types.BlockItemWithLore;
 import games.enchanted.registry.types.VerticalSlabItem;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -12,6 +13,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
     //block items
+
     // wood slabs
     public static final BlockItem VERTICAL_OAK_SLAB = registerBlockItem(ModBlocks.VERTICAL_OAK_SLAB ,"vertical_oak_slab");
     public static final BlockItem VERTICAL_SPRUCE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SPRUCE_SLAB ,"vertical_spruce_slab");
@@ -43,7 +45,7 @@ public class ModItems {
     public static final BlockItem VERTICAL_POLISHED_GRANITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB ,"vertical_polished_granite_slab");
     public static final BlockItem VERTICAL_SMOOTH_RED_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB ,"vertical_smooth_red_sandstone_slab");
     public static final BlockItem VERTICAL_MOSSY_STONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB ,"vertical_mossy_stone_brick_slab");
-    public static final BlockItem VERTICAL_POLISHEED_DIORITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHEED_DIORITE_SLAB ,"vertical_polished_diorite_slab");
+    public static final BlockItem VERTICAL_POLISHED_DIORITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_DIORITE_SLAB ,"vertical_polished_diorite_slab");
     public static final BlockItem VERTICAL_MOSSY_COBBLESTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_MOSSY_COBBLESTONE_SLAB ,"vertical_mossy_cobblestone_slab");
     public static final BlockItem VERTICAL_ENDSTONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_ENDSTONE_BRICK_SLAB ,"vertical_end_stone_brick_slab");
     public static final BlockItem VERTICAL_SMOOTH_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_SANDSTONE_SLAB ,"vertical_smooth_sandstone_slab");
@@ -65,7 +67,7 @@ public class ModItems {
     public static final BlockItem VERTICAL_WEATHERED_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB ,"vertical_weathered_cut_copper_slab");
     public static final BlockItem VERTICAL_OXIDIZED_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB ,"vertical_oxidized_cut_copper_slab");
 
-
+    public static final Item VERTICAL_SLABS_ICON = new Item(new FabricItemSettings());
 
     // registers all block items and puts them in building blocks
     public static BlockItem registerBlockItemWithLore(Block blockId ,String id) {
@@ -79,6 +81,6 @@ public class ModItems {
     }
 
     public static void registerItems(){
-        //Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, "vertical_oak_slab.json"), VERTICAL_OAK_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, "vertical_slabs_icon"), VERTICAL_SLABS_ICON);
     }
 }
