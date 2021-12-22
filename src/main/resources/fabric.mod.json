@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "enchanted-vertical-slabs",
-  "version": "1.0.0",
+  "version": "1.1.0",
 
   "name": "Enchanted Vertical Slabs",
-  "description": "A simple mod that adds Vertical Slabs to Minecraft",
+  "description": "A simple mod that adds Vertical Slabs to Minecraft\n New in v1.1: Translations for all English languages",
   "authors": [
     "Enchanted Games"
   ],
