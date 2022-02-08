@@ -2,9 +2,13 @@ package games.enchanted;
 
 import games.enchanted.registry.ModFlammableBlocks;
 import games.enchanted.registry.ModItems;
+import games.enchanted.addons.BetterendBlocks;
+import games.enchanted.addons.BetterendGroup;
+import games.enchanted.addons.BetterendItems;
 import games.enchanted.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -17,6 +21,9 @@ public class VerticalSlabs implements ModInitializer{
     public static final String MOD_ID = "enchanted-vertical-slabs";
     // logger
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+
+    private boolean bypassBetterendCheck = true;
+    private boolean betterendLoaded = FabricLoader.getInstance().isModLoaded("betterend");
 
     // creative tabs
     public static final ItemGroup VERTICAL_SLABS_GROUP = FabricItemGroupBuilder.create(
@@ -82,12 +89,18 @@ public class VerticalSlabs implements ModInitializer{
         // calls block and item classes to register blocks and items
         ModItems.registerItems();
         ModBlocks.registerBlocks();
+        if(betterendLoaded || bypassBetterendCheck){
+            BetterendItems.registerItems();
+            BetterendBlocks.registerBlocks();
+            BetterendGroup.build();
+        }
 
         // registers flammable blocks
         ModFlammableBlocks.registerFlammables();
 
         // logs to console that the mod is ready
         LOGGER.info("Enchanted Games Mod: " + MOD_ID + " initialized!");
+        LOGGER.info("[" + MOD_ID + "] Betterend loaded: "+ betterendLoaded);
     }
     
 }
