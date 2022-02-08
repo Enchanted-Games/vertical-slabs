@@ -32,7 +32,6 @@ public class OxidizableVerticalSlab extends CombinableVerticalSlabBlock implemen
 
     @Override
     public OxidationLevel getDegradationLevel() {
-        // TODO Auto-generated method stub
         return null;
     }
 }*/
