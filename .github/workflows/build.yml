@@ -4,8 +4,7 @@
 # against bad commits.
 
 name: build
-#on: [pull_request, push]
-on: []
+on: [pull_request, push, build]
 
 jobs:
   build:
