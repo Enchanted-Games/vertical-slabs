@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
   "id": "enchanted-vertical-slabs",
-  "version": "1.1.0",
+  "version": "1.2.0",
 
   "name": "Enchanted Vertical Slabs",
-  "description": "A simple mod that adds Vertical Slabs to Minecraft\n New in v1.1: Translations for all English languages",
+  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.2: Compatibility with Better End thanks to Just__Ju_\nYou need to have Better End installed to see and use Better End vertical slabs. Uninstalling Better End will also remove the Better End vertical slabs added by this mod.",
   "authors": [
-    "Enchanted Games"
+    "Enchanted Games [programming]",
+    "Just__Ju_ [better end compatibility]"
   ],
   "contact": {
     "homepage": "https://verticalslabs.enchanted.games",

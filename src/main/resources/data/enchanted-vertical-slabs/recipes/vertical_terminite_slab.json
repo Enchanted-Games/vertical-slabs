@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "betterend:terminite_tile"
+        }
+    },
+    "result": {
+        "item": "enchanted-vertical-slabs:vertical_terminite_slab",
+        "count": 6
+    }
+}

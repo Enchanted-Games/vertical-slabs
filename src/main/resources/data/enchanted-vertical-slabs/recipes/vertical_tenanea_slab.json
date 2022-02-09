@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "betterend:tenanea_planks"
+        }
+    },
+    "result": {
+        "item": "enchanted-vertical-slabs:vertical_tenanea_slab",
+        "count": 6
+    }
+}

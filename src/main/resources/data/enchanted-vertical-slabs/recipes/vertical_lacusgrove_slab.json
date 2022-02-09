@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "betterend:lacugrove_planks"
+        }
+    },
+    "result": {
+        "item": "enchanted-vertical-slabs:vertical_lacusgrove_slab",
+        "count": 6
+    }
+}

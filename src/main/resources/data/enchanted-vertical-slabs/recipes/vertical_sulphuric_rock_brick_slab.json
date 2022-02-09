@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "betterend:sulphuric_rock_bricks"
+        }
+    },
+    "result": {
+        "item": "enchanted-vertical-slabs:vertical_sulphuric_rock_brick_slab",
+        "count": 6
+    }
+}

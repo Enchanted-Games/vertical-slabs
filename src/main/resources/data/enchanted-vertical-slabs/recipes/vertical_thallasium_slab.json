@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "betterend:thallasium_tile"
+        }
+    },
+    "result": {
+        "item": "enchanted-vertical-slabs:vertical_thallasium_slab",
+        "count": 6
+    }
+}
