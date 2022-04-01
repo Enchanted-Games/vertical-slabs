@@ -1,40 +1,34 @@
 {
-  "schemaVersion": 1,
-  "id": "enchanted-vertical-slabs",
-  "version": "1.2.0",
+    "schemaVersion": 1,
+    "id": "enchanted-vertical-slabs",
+    "version": "1.4.0",
 
-  "name": "Enchanted Vertical Slabs",
-  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.2: Compatibility with Better End thanks to Just__Ju_\n  You need to have Better End installed to see and use Better End vertical slabs. Uninstalling Better End will also remove the Better End vertical slabs added by this mod.\nNew in v1.3: Updated for 1.18.2",
-  "authors": [
-    "Enchanted Games [programming]",
-    "Just__Ju_ [better end compatibility]"
-  ],
-  "contact": {
-    "homepage": "https://verticalslabs.enchanted.games",
-    "sources": "https://github.com/Enchanted-Games/vertical-slabs",
-    "issues": "https://github.com/Enchanted-Games/vertical-slabs/issues"
-  },
+    "name": "Enchanted Vertical Slabs",
+    "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.4: Compatibility with Better End moved to standalone mod\n  See the 'Seperating' link below for more details",
+    "authors": ["Enchanted Games [programming]", "Just__Ju_ [better end compatibility]"],
+    "contact": {
+        "homepage": "https://verticalslabs.enchanted.games",
+        "sources": "https://github.com/Enchanted-Games/vertical-slabs",
+        "issues": "https://github.com/Enchanted-Games/vertical-slabs/issues",
+        "seperating": "https://github.com/Enchanted-Games/vertical-slabs/issues"
+    },
 
-  "license": "CC0-1.0",
-  "icon": "assets/enchanted-vertical-slabs/icon.png",
+    "license": "CC0-1.0",
+    "icon": "assets/enchanted-vertical-slabs/icon.png",
 
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "games.enchanted.VerticalSlabs"
-    ]
-  },
-  "mixins": [
+    "environment": "*",
+    "entrypoints": {
+        "main": ["games.enchanted.VerticalSlabs"]
+    },
+    "mixins": [],
 
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.11.3",
-    "fabric": "*",
-    "minecraft": ">=1.18",
-    "java": ">=16"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+    "depends": {
+        "fabricloader": ">=0.11.3",
+        "fabric": "*",
+        "minecraft": ">=1.18",
+        "java": ">=16"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
 }
