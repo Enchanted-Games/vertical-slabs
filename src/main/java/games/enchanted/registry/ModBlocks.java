@@ -3,7 +3,6 @@ package games.enchanted.registry;
 import net.minecraft.block.*;
 
 public class ModBlocks{
-
     // wood slabs
     public static final Block VERTICAL_OAK_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_oak_slab");
     public static final Block VERTICAL_SPRUCE_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_spruce_slab");
@@ -58,8 +57,6 @@ public class ModBlocks{
     public static final Block VERTICAL_EXPOSED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_exposed_cut_copper_slab");
     public static final Block VERTICAL_WEATHERED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_weathered_cut_copper_slab");
     public static final Block VERTICAL_OXIDIZED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_oxidized_cut_copper_slab");
-
-    
 
 
     public static void registerBlocks(){
