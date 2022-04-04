@@ -7,7 +7,7 @@
     "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.4: Compatibility with Better End moved to standalone mod\n  Click the Website button above for more details",
     "authors": ["Enchanted Games [programming]"],
     "contact": {
-        "homepage": "https://verticalslabs.enchanted.games",
+        "homepage": "https://verticalslabs.enchanted.games/index.html?from=mainmod",
         "sources": "https://github.com/Enchanted-Games/vertical-slabs",
         "issues": "https://github.com/Enchanted-Games/vertical-slabs/issues"
     },
@@ -26,8 +26,5 @@
         "fabric": "*",
         "minecraft": ">=1.18",
         "java": ">=16"
-    },
-    "suggests": {
-        "another-mod": "*"
     }
 }
