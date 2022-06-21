@@ -10,6 +10,7 @@ public class ModBlocks{
     public static final Block VERTICAL_JUNGLE_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_jungle_slab");
     public static final Block VERTICAL_ACACIA_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_acacia_slab");
     public static final Block VERTICAL_DARK_OAK_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_dark_oak_slab");
+    public static final Block VERTICAL_MANGROVE_SLAB = games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_mangrove_slab");
     public static final Block VERTICAL_CRIMSON_SLAB = games.enchanted.shared.registerBlocks.registerVerticalNetherWoodSlab("vertical_crimson_slab");
     public static final Block VERTICAL_WARPED_SLAB = games.enchanted.shared.registerBlocks.registerVerticalNetherWoodSlab("vertical_warped_slab");
 

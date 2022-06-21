@@ -2,11 +2,10 @@ package games.enchanted;
 
 import games.enchanted.registry.ModFlammableBlocks;
 import games.enchanted.registry.ModItems;
-import games.enchanted.addons.BetterendAddon;
 import games.enchanted.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.MinecraftVersion;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -17,11 +16,24 @@ public class VerticalSlabs implements ModInitializer{
 
     // mod id
     public static final String MOD_ID = "enchanted-vertical-slabs";
+    public static String minecraftCurrentVersion = MinecraftVersion.CURRENT.getReleaseTarget();
     // logger
     public static final Logger LOGGER = LogManager.getLogger("Enchanted Vertical Slabs");
 
-    private boolean bypassBetterendCheck = false;
-    private boolean betterendLoaded = FabricLoader.getInstance().isModLoaded("betterend");
+    @Override
+    public void onInitialize() {
+        LOGGER.info("[" + MOD_ID + "] Detected Minecraft " + minecraftCurrentVersion + " (release target)");
+
+        // calls block and item classes to register blocks and items
+        ModItems.registerItems();
+        ModBlocks.registerBlocks();
+
+        // registers flammable blocks
+        ModFlammableBlocks.registerFlammables();
+
+        // logs to console that the mod is ready
+        LOGGER.info("[" + MOD_ID + "] Enchanted Vertical Slabs initialized!");
+    }
 
     // creative tabs
     public static final ItemGroup VERTICAL_SLABS_GROUP = FabricItemGroupBuilder.create(
@@ -82,21 +94,6 @@ public class VerticalSlabs implements ModInitializer{
         }
     ).build();
 
-    @Override
-    public void onInitialize() {
-        // calls block and item classes to register blocks and items
-        ModItems.registerItems();
-        ModBlocks.registerBlocks();
-        if(betterendLoaded || bypassBetterendCheck){
-            BetterendAddon.build();
-        }
-
-        // registers flammable blocks
-        ModFlammableBlocks.registerFlammables();
-
-        // logs to console that the mod is ready
-        LOGGER.info("[" + MOD_ID + "] Enchanted Vertical Slabs initialized!");
-        LOGGER.info("[" + MOD_ID + "] Better End mod loaded: "+ betterendLoaded);
-    }
+    
     
 }

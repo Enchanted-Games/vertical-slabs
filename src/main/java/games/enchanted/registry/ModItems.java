@@ -21,6 +21,7 @@ public class ModItems {
     public static final BlockItem VERTICAL_JUNGLE_SLAB = registerBlockItem(ModBlocks.VERTICAL_JUNGLE_SLAB ,"vertical_jungle_slab");
     public static final BlockItem VERTICAL_ACACIA_SLAB = registerBlockItem(ModBlocks.VERTICAL_ACACIA_SLAB ,"vertical_acacia_slab");
     public static final BlockItem VERTICAL_DARK_OAK_SLAB = registerBlockItem(ModBlocks.VERTICAL_DARK_OAK_SLAB ,"vertical_dark_oak_slab");
+    public static final BlockItem VERTICAL_MANGROVE_SLAB = registerBlockItem(ModBlocks.VERTICAL_MANGROVE_SLAB ,"vertical_mangrove_slab");
     public static final BlockItem VERTICAL_CRIMSON_SLAB = registerBlockItem(ModBlocks.VERTICAL_CRIMSON_SLAB ,"vertical_crimson_slab");
     public static final BlockItem VERTICAL_WARPED_SLAB = registerBlockItem(ModBlocks.VERTICAL_WARPED_SLAB ,"vertical_warped_slab");
     
