@@ -48,5 +48,9 @@ public class registerBlocks {
         final Settings settings = FabricBlockSettings.of(Material.METAL).strength(3f, 6f).sounds(BlockSoundGroup.COPPER);
         return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_COPPER_PLACE));
     }
-
+    public static Block registerVerticalMudSlab(String id) {
+        final Settings settings = FabricBlockSettings.of(Material.METAL).strength(3f, 6f).sounds(BlockSoundGroup.COPPER);
+        return Registry.register(Registry.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_COPPER_PLACE));
+    }
+    
 }

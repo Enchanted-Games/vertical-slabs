@@ -58,6 +58,8 @@ public class ModBlocks{
     public static final Block VERTICAL_EXPOSED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_exposed_cut_copper_slab");
     public static final Block VERTICAL_WEATHERED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_weathered_cut_copper_slab");
     public static final Block VERTICAL_OXIDIZED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_oxidized_cut_copper_slab");
+    
+    public static final Block VERTICAL_MUD_BRICK_SLAB = games.enchanted.shared.registerBlocks.registerVerticalMudSlab("vertical_mud_brick_slab");
 
 
     public static void registerBlocks(){

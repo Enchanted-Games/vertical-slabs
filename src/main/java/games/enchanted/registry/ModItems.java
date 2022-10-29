@@ -3,7 +3,6 @@ package games.enchanted.registry;
 import games.enchanted.VerticalSlabs;
 import games.enchanted.registry.types.BlockItemWithLore;
 import games.enchanted.registry.types.VerticalSlabItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -67,8 +66,9 @@ public class ModItems {
     public static final BlockItem VERTICAL_EXPOSED_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB ,"vertical_exposed_cut_copper_slab");
     public static final BlockItem VERTICAL_WEATHERED_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB ,"vertical_weathered_cut_copper_slab");
     public static final BlockItem VERTICAL_OXIDIZED_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB ,"vertical_oxidized_cut_copper_slab");
+    
+    public static final BlockItem VERTICAL_MUD_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_MUD_BRICK_SLAB ,"vertical_mud_brick_slab");
 
-    public static final Item VERTICAL_SLABS_ICON = new Item(new FabricItemSettings());
 
     // registers all block items and puts them in building blocks
     public static BlockItem registerBlockItemWithLore(Block blockId ,String id) {
@@ -82,6 +82,5 @@ public class ModItems {
     }
 
     public static void registerItems(){
-        Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, "vertical_slabs_icon"), VERTICAL_SLABS_ICON);
     }
 }

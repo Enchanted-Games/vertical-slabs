@@ -15,6 +15,7 @@ public class ModFlammableBlocks {
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_JUNGLE_SLAB, Encouragement, Flammability);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_ACACIA_SLAB, Encouragement, Flammability);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_DARK_OAK_SLAB, Encouragement, Flammability);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_MANGROVE_SLAB, Encouragement, Flammability);
     }
 
 }
