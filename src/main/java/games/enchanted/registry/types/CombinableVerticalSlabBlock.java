@@ -2,6 +2,9 @@ package games.enchanted.registry.types;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
@@ -18,23 +21,27 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 
-public class CombinableVerticalSlabBlock extends HorizontalFacingBlock {
+public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implements Waterloggable{
     public static final BooleanProperty SINGLE = BooleanProperty.of("single_slab");
     public static Boolean CAN_COMBINE = true;
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
         stateManager.add(SINGLE);
         stateManager.add(Properties.HORIZONTAL_FACING);
+		stateManager.add(Properties.WATERLOGGED);
     }
 
     private SoundEvent blockPlaceSound;
 
     public CombinableVerticalSlabBlock(Settings settings, SoundEvent blockSoundEvent) {
         super(settings);
+        
         setDefaultState(this.stateManager.getDefaultState().with(SINGLE, true));
         setDefaultState(this.stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
+        this.setDefaultState((BlockState)((BlockState)this.getDefaultState().with(Properties.WATERLOGGED, false)));
 
         blockPlaceSound = blockSoundEvent;
     }
@@ -148,11 +155,35 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock {
         // makes arm swing
         return ActionResult.success(world.isClient);
     }
+ 
+    @Override
+	public BlockState getPlacementState(ItemPlacementContext ctx) {
+		return this.getDefaultState().with(Properties.HORIZONTAL_FACING, ctx.getPlayerFacing());
+	}
+	
 
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        // gets player rotation
-        return this.getDefaultState().with(Properties.HORIZONTAL_FACING, ctx.getPlayerFacing());
+    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
+        if (state.get(SINGLE) != false) { 
+            return Waterloggable.super.tryFillWithFluid(world, pos, state, fluidState);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+        if (state.get(SINGLE) != false) {
+            return Waterloggable.super.canFillWithFluid(world, pos, state, fluid);
+        }
+        return false;
+    }
+
+	@Override
+    public FluidState getFluidState(BlockState state) {
+        if (state.get(Properties.WATERLOGGED).booleanValue()) {
+            return Fluids.WATER.getStill(false);
+        }
+        return super.getFluidState(state);
     }
 
 }

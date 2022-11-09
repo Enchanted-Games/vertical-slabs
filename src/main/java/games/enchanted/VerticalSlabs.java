@@ -1,6 +1,6 @@
 package games.enchanted;
 
-import games.enchanted.registry.ModFlammableBlocks;
+import games.enchanted.registry.ModFabricRegistries;
 import games.enchanted.registry.ModItems;
 import games.enchanted.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
@@ -9,6 +9,7 @@ import net.minecraft.MinecraftVersion;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,23 +18,9 @@ public class VerticalSlabs implements ModInitializer{
     // mod id
     public static final String MOD_ID = "enchanted-vertical-slabs";
     public static String minecraftCurrentVersion = MinecraftVersion.CURRENT.getReleaseTarget();
+    public static Boolean is1_18 = minecraftCurrentVersion.contains("1.18");
     // logger
     public static final Logger LOGGER = LogManager.getLogger("Enchanted Vertical Slabs");
-
-    @Override
-    public void onInitialize() {
-        LOGGER.info("[" + MOD_ID + "] Detected Minecraft " + minecraftCurrentVersion + " (release target)");
-
-        // calls block and item classes to register blocks and items
-        ModItems.registerItems();
-        ModBlocks.registerBlocks();
-
-        // registers flammable blocks
-        ModFlammableBlocks.registerFlammables();
-
-        // logs to console that the mod is ready
-        LOGGER.info("[" + MOD_ID + "] Enchanted Vertical Slabs initialized!");
-    }
 
     // creative tabs
     public static final ItemGroup VERTICAL_SLABS_GROUP = FabricItemGroupBuilder.create(
@@ -52,7 +39,9 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_JUNGLE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_ACACIA_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_DARK_OAK_SLAB));
-            stacks.add(new ItemStack(ModBlocks.VERTICAL_MANGROVE_SLAB));
+            if(!is1_18){
+                stacks.add(new ItemStack(ModBlocks.VERTICAL_MANGROVE_SLAB));
+            }
             stacks.add(new ItemStack(ModBlocks.VERTICAL_CRIMSON_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_WARPED_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_STONE_SLAB));
@@ -63,7 +52,9 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_COBBLESTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_BRICK_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_STONE_BRICK_SLAB));
-            stacks.add(new ItemStack(ModBlocks.VERTICAL_MUD_BRICK_SLAB));
+            if(!is1_18){
+                stacks.add(new ItemStack(ModBlocks.VERTICAL_MUD_BRICK_SLAB));
+            }
             stacks.add(new ItemStack(ModBlocks.VERTICAL_NETHER_BRICK_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_QUARTZ_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB));
@@ -92,10 +83,25 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_BLACKSTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB));
-
         }
     ).build();
 
-    
-    
+    @Override
+    public void onInitialize() {
+        LOGGER.info("[" + MOD_ID + "] Detected Minecraft " + minecraftCurrentVersion + " (release target)");
+        if(is1_18){
+            LOGGER.info("[" + MOD_ID + "] Skipping 1.19 blocks and items");
+        }
+
+        // calls block and item classes to register blocks and items
+        ModItems.registerItems();
+        ModBlocks.registerBlocks();
+
+        // registers special properties for blocks
+        ModFabricRegistries.registerFlammables();
+        ModFabricRegistries.registerOxidisables();
+
+        // logs to console that the mod is ready
+        LOGGER.info("[" + MOD_ID + "] Enchanted Vertical Slabs initialized!");
+    }
 }
