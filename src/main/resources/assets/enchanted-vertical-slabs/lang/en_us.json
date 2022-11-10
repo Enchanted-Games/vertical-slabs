@@ -50,13 +50,14 @@
     "block.enchanted-vertical-slabs.vertical_polished_blackstone_brick_slab": "Vertical Polished Blackstone Brick Slab",
 
     "block.enchanted-vertical-slabs.vertical_cut_copper_slab": "Vertical Cut Copper Slab",
-    "block.enchanted-vertical-slabs.vertical_cut_copper_slab.lore": "Does not oxidise and can't be waxed",
     "block.enchanted-vertical-slabs.vertical_exposed_cut_copper_slab": "Vertical Exposed Cut Copper Slab",
-    "block.enchanted-vertical-slabs.vertical_exposed_cut_copper_slab.lore": "Does not oxidise and can't be waxed",
     "block.enchanted-vertical-slabs.vertical_weathered_cut_copper_slab": "Vertical Weathered Cut Copper Slab",
-    "block.enchanted-vertical-slabs.vertical_weathered_cut_copper_slab.lore": "Does not oxidise and can't be waxed",
-    "block.enchanted-vertical-slabs.vertical_oxidized_cut_copper_slab": "Vertical Oxidised Cut Copper Slab",
-    "block.enchanted-vertical-slabs.vertical_oxidized_cut_copper_slab.lore": "Does not oxidise and can't be waxed",
+    "block.enchanted-vertical-slabs.vertical_oxidized_cut_copper_slab": "Vertical Oxidized Cut Copper Slab",
+
+    "block.enchanted-vertical-slabs.vertical_waxed_cut_copper_slab": "Vertical Waxed Cut Copper Slab",
+    "block.enchanted-vertical-slabs.vertical_waxed_exposed_cut_copper_slab": "Vertical Waxed Exposed Cut Copper Slab",
+    "block.enchanted-vertical-slabs.vertical_waxed_weathered_cut_copper_slab": "Vertical Waxed Weathered Cut Copper Slab",
+    "block.enchanted-vertical-slabs.vertical_waxed_oxidized_cut_copper_slab": "Vertical Waxed Oxidized Cut Copper Slab",
 
     "block.enchanted-vertical-slabs.vertical_mud_brick_slab": "Vertical Mud Brick Slab"
 }
