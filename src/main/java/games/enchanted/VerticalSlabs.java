@@ -33,6 +33,10 @@ public class VerticalSlabs implements ModInitializer{
             stacks.add(new ItemStack(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB));
+            stacks.add(new ItemStack(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_OAK_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_SPRUCE_SLAB));
             stacks.add(new ItemStack(ModBlocks.VERTICAL_BIRCH_SLAB));
