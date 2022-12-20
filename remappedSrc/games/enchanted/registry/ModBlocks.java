@@ -1,6 +1,8 @@
 package games.enchanted.registry;
 
 import net.minecraft.block.*;
+import net.minecraft.block.Oxidizable.OxidationLevel;
+import games.enchanted.VerticalSlabs;
 
 public class ModBlocks{
     // wood slabs
@@ -10,7 +12,7 @@ public class ModBlocks{
     public static final Block VERTICAL_JUNGLE_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_jungle_slab");
     public static final Block VERTICAL_ACACIA_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_acacia_slab");
     public static final Block VERTICAL_DARK_OAK_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_dark_oak_slab");
-    public static final Block VERTICAL_MANGROVE_SLAB = games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_mangrove_slab");
+    public static final Block VERTICAL_MANGROVE_SLAB = (!VerticalSlabs.is1_18) ? games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_mangrove_slab") : null;
     public static final Block VERTICAL_CRIMSON_SLAB = games.enchanted.shared.registerBlocks.registerVerticalNetherWoodSlab("vertical_crimson_slab");
     public static final Block VERTICAL_WARPED_SLAB = games.enchanted.shared.registerBlocks.registerVerticalNetherWoodSlab("vertical_warped_slab");
 
@@ -54,13 +56,17 @@ public class ModBlocks{
     public static final Block VERTICAL_POLISHED_BLACKSTONE_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_polished_blackstone_slab");
     public static final Block VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_polished_blackstone_brick_slab");
 
-    public static final Block VERTICAL_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_cut_copper_slab");
-    public static final Block VERTICAL_EXPOSED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_exposed_cut_copper_slab");
-    public static final Block VERTICAL_WEATHERED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_weathered_cut_copper_slab");
-    public static final Block VERTICAL_OXIDIZED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBlackstoneSlab("vertical_oxidized_cut_copper_slab");
-    
-    public static final Block VERTICAL_MUD_BRICK_SLAB = games.enchanted.shared.registerBlocks.registerVerticalMudSlab("vertical_mud_brick_slab");
+    public static final Block VERTICAL_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_cut_copper_slab", OxidationLevel.UNAFFECTED);
+    public static final Block VERTICAL_EXPOSED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_exposed_cut_copper_slab", OxidationLevel.EXPOSED);
+    public static final Block VERTICAL_WEATHERED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_weathered_cut_copper_slab", OxidationLevel.WEATHERED);
+    public static final Block VERTICAL_OXIDIZED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_oxidized_cut_copper_slab", OxidationLevel.OXIDIZED);
 
+    public static final Block VERTICAL_WAXED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_waxed_cut_copper_slab", OxidationLevel.UNAFFECTED);
+    public static final Block VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_waxed_exposed_cut_copper_slab", OxidationLevel.EXPOSED);
+    public static final Block VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_waxed_weathered_cut_copper_slab", OxidationLevel.WEATHERED);
+    public static final Block VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_waxed_oxidized_cut_copper_slab", OxidationLevel.OXIDIZED);
+    
+    public static final Block VERTICAL_MUD_BRICK_SLAB = (!VerticalSlabs.is1_18) ? games.enchanted.shared.registerBlocks.registerVerticalMudSlab("vertical_mud_brick_slab") : null;
 
     public static void registerBlocks(){
         

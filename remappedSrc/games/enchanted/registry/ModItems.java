@@ -1,9 +1,7 @@
 package games.enchanted.registry;
 
 import games.enchanted.VerticalSlabs;
-import games.enchanted.registry.types.BlockItemWithLore;
 import games.enchanted.registry.types.VerticalSlabItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -14,6 +12,17 @@ import net.minecraft.util.registry.Registry;
 public class ModItems {
     //block items
 
+    // coppers
+    public static final BlockItem VERTICAL_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_CUT_COPPER_SLAB ,"vertical_cut_copper_slab");
+    public static final BlockItem VERTICAL_EXPOSED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB ,"vertical_exposed_cut_copper_slab");
+    public static final BlockItem VERTICAL_WEATHERED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB ,"vertical_weathered_cut_copper_slab");
+    public static final BlockItem VERTICAL_OXIDIZED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB ,"vertical_oxidized_cut_copper_slab");
+
+    public static final BlockItem VERTICAL_WAXED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_WAXED_CUT_COPPER_SLAB ,"vertical_waxed_cut_copper_slab");
+    public static final BlockItem VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB ,"vertical_waxed_exposed_cut_copper_slab");
+    public static final BlockItem VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB ,"vertical_waxed_weathered_cut_copper_slab");
+    public static final BlockItem VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB ,"vertical_waxed_oxidized_cut_copper_slab");
+
     // wood slabs
     public static final BlockItem VERTICAL_OAK_SLAB = registerBlockItem(ModBlocks.VERTICAL_OAK_SLAB ,"vertical_oak_slab");
     public static final BlockItem VERTICAL_SPRUCE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SPRUCE_SLAB ,"vertical_spruce_slab");
@@ -21,7 +30,7 @@ public class ModItems {
     public static final BlockItem VERTICAL_JUNGLE_SLAB = registerBlockItem(ModBlocks.VERTICAL_JUNGLE_SLAB ,"vertical_jungle_slab");
     public static final BlockItem VERTICAL_ACACIA_SLAB = registerBlockItem(ModBlocks.VERTICAL_ACACIA_SLAB ,"vertical_acacia_slab");
     public static final BlockItem VERTICAL_DARK_OAK_SLAB = registerBlockItem(ModBlocks.VERTICAL_DARK_OAK_SLAB ,"vertical_dark_oak_slab");
-    public static final BlockItem VERTICAL_MANGROVE_SLAB = registerBlockItem(ModBlocks.VERTICAL_MANGROVE_SLAB ,"vertical_mangrove_slab");
+    public static final BlockItem VERTICAL_MANGROVE_SLAB = (!VerticalSlabs.is1_18) ? registerBlockItem(ModBlocks.VERTICAL_MANGROVE_SLAB ,"vertical_mangrove_slab") : null;
     public static final BlockItem VERTICAL_CRIMSON_SLAB = registerBlockItem(ModBlocks.VERTICAL_CRIMSON_SLAB ,"vertical_crimson_slab");
     public static final BlockItem VERTICAL_WARPED_SLAB = registerBlockItem(ModBlocks.VERTICAL_WARPED_SLAB ,"vertical_warped_slab");
     
@@ -35,6 +44,7 @@ public class ModItems {
     public static final BlockItem VERTICAL_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_BRICK_SLAB ,"vertical_brick_slab");
     public static final BlockItem VERTICAL_STONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_STONE_BRICK_SLAB ,"vertical_stone_brick_slab");
     public static final BlockItem VERTICAL_NETHER_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_NETHER_BRICK_SLAB ,"vertical_nether_brick_slab");
+    public static final BlockItem VERTICAL_MUD_BRICK_SLAB = (!VerticalSlabs.is1_18) ? registerBlockItem(ModBlocks.VERTICAL_MUD_BRICK_SLAB ,"vertical_mud_brick_slab") : null;
     public static final BlockItem VERTICAL_QUARTZ_SLAB = registerBlockItem(ModBlocks.VERTICAL_QUARTZ_SLAB ,"vertical_quartz_slab");
     public static final BlockItem VERTICAL_SMOOTH_QUARTZ_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB ,"vertical_smooth_quartz_slab");
     public static final BlockItem VERTICAL_RED_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB ,"vertical_red_sandstone_slab");
@@ -63,20 +73,11 @@ public class ModItems {
     public static final BlockItem VERTICAL_POLISHED_BLACKSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB ,"vertical_polished_blackstone_slab");
     public static final BlockItem VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB ,"vertical_polished_blackstone_brick_slab");
 
-    public static final BlockItem VERTICAL_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_CUT_COPPER_SLAB ,"vertical_cut_copper_slab");
-    public static final BlockItem VERTICAL_EXPOSED_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_EXPOSED_CUT_COPPER_SLAB ,"vertical_exposed_cut_copper_slab");
-    public static final BlockItem VERTICAL_WEATHERED_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_WEATHERED_CUT_COPPER_SLAB ,"vertical_weathered_cut_copper_slab");
-    public static final BlockItem VERTICAL_OXIDIZED_CUT_COPPER_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_OXIDIZED_CUT_COPPER_SLAB ,"vertical_oxidized_cut_copper_slab");
-    
-    public static final BlockItem VERTICAL_MUD_BRICK_SLAB = registerBlockItemWithLore(ModBlocks.VERTICAL_MUD_BRICK_SLAB ,"vertical_mud_brick_slab");
-
-    public static final Item VERTICAL_SLABS_ICON = new Item(new FabricItemSettings());
-
     // registers all block items and puts them in building blocks
-    public static BlockItem registerBlockItemWithLore(Block blockId ,String id) {
-        Item.Settings settings = new Item.Settings().group(ItemGroup.BUILDING_BLOCKS);
-        return Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, id), new BlockItemWithLore(blockId, settings, id));
-    }
+    // public static BlockItem registerBlockItemWithLore(Block blockId ,String id) {
+    //     Item.Settings settings = new Item.Settings().group(ItemGroup.BUILDING_BLOCKS);
+    //     return Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, id), new BlockItemWithLore(blockId, settings, id));
+    // }
 
     public static BlockItem registerBlockItem(Block blockId ,String id) {
         Item.Settings settings = new Item.Settings().group(ItemGroup.BUILDING_BLOCKS);
@@ -84,6 +85,5 @@ public class ModItems {
     }
 
     public static void registerItems(){
-        Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, "vertical_slabs_icon"), VERTICAL_SLABS_ICON);
     }
 }

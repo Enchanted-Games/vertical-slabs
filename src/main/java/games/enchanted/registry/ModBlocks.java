@@ -34,7 +34,7 @@ public class ModBlocks{
     public static final Block VERTICAL_PURPUR_SLAB = games.enchanted.shared.registerBlocks.registerVerticalStoneSlab("vertical_purpur_slab");
     public static final Block VERTICAL_PRISMARINE_SLAB = games.enchanted.shared.registerBlocks.registerVerticalStoneSlab("vertical_prismarine_slab");
     public static final Block VERTICAL_PRISMARINE_BRICK_SLAB = games.enchanted.shared.registerBlocks.registerVerticalStoneSlab("vertical_prismarine_brick_slab");
-    public static final Block VERTICAL_DARK_PRISMARINE__SLAB = games.enchanted.shared.registerBlocks.registerVerticalStoneSlab("vertical_dark_prismarine_slab");
+    public static final Block VERTICAL_DARK_PRISMARINE_SLAB = games.enchanted.shared.registerBlocks.registerVerticalStoneSlab("vertical_dark_prismarine_slab");
     public static final Block VERTICAL_POLISHED_GRANITE_SLAB = games.enchanted.shared.registerBlocks.registerVerticalStoneSlab("vertical_polished_granite_slab");
     public static final Block VERTICAL_SMOOTH_RED_SANDSTONE_SLAB = games.enchanted.shared.registerBlocks.registerVerticalStoneSlab("vertical_smooth_red_sandstone_slab");
     public static final Block VERTICAL_MOSSY_STONE_BRICK_SLAB = games.enchanted.shared.registerBlocks.registerVerticalStoneSlab("vertical_mossy_stone_brick_slab");
@@ -67,6 +67,9 @@ public class ModBlocks{
     public static final Block VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_waxed_oxidized_cut_copper_slab", OxidationLevel.OXIDIZED);
     
     public static final Block VERTICAL_MUD_BRICK_SLAB = (!VerticalSlabs.is1_18) ? games.enchanted.shared.registerBlocks.registerVerticalMudSlab("vertical_mud_brick_slab") : null;
+    
+    public static final Block VERTICAL_BAMBOO_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBambooSlab("vertical_bamboo_slab");
+    public static final Block VERTICAL_BAMBOO_MOSAIC_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBambooSlab("vertical_bamboo_mosaic_slab");
 
     public static void registerBlocks(){
         
