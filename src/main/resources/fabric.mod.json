@@ -1,10 +1,10 @@
 {
     "schemaVersion": 1,
     "id": "enchanted-vertical-slabs",
-    "version": "1.6",
+    "version": "1.7",
 
     "name": "Enchanted Vertical Slabs",
-    "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.6: \n  - All vertical slabs can now waterlogged. \n  - All Copper based vertical slabs can now be waxed and can oxidise.",
+    "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.7: \n  - Update to 1.19.3 \n  - Slabs now show near blocks of the same material in the creative menu \n  - Added 1.20 slabs (enable the update_1_20 data pack)",
     "authors": ["Enchanted Games [programming]"],
     "contact": {
         "homepage": "https://verticalslabs.enchanted.games/index.html?from=mainmod",
