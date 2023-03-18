@@ -1,6 +1,5 @@
 package games.enchanted.registry;
 
-import games.enchanted.VerticalSlabs;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 
@@ -17,9 +16,10 @@ public class ModFabricRegistries {
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_JUNGLE_SLAB, Encouragement, Flammability);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_ACACIA_SLAB, Encouragement, Flammability);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_DARK_OAK_SLAB, Encouragement, Flammability);
-        if(!VerticalSlabs.is1_18){
-            FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_MANGROVE_SLAB, Encouragement, Flammability);
-        }
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_MANGROVE_SLAB, Encouragement, Flammability);
+        
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_BAMBOO_SLAB, Encouragement, Flammability);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB, Encouragement, Flammability);
     }
 
     public static void registerOxidisables(){

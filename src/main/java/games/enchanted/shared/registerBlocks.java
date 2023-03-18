@@ -21,6 +21,10 @@ public class registerBlocks {
         final Settings settings = FabricBlockSettings.of(Material.WOOD).strength(2f, 6f).sounds(BlockSoundGroup.WOOD);
         return Registry.register(Registries.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_WOOD_PLACE));
     }
+    public static Block registerVerticalCherryWoodSlab(String id) {
+        final Settings settings = FabricBlockSettings.of(Material.WOOD).strength(2f, 6f).sounds(BlockSoundGroup.CHERRY_WOOD).requires(FeatureFlags.UPDATE_1_20);
+        return Registry.register(Registries.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_CHERRY_WOOD_PLACE));
+    }
     public static Block registerVerticalBambooSlab(String id) {
         final Settings settings = FabricBlockSettings.of(Material.BAMBOO).strength(2f, 6f).sounds(BlockSoundGroup.BAMBOO_WOOD).requires(FeatureFlags.UPDATE_1_20);
         return Registry.register(Registries.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(settings, SoundEvents.BLOCK_BAMBOO_WOOD_PLACE));

@@ -184,7 +184,7 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
             return Fluids.WATER.getStill(false);
         }
         // return state.getFluidState();
-        return super.getFluidState(state);
+        return state.getFluidState();
     }
 
 }

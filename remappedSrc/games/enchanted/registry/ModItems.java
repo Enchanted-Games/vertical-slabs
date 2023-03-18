@@ -5,9 +5,11 @@ import games.enchanted.registry.types.VerticalSlabItem;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureFlag;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 
 public class ModItems {
     //block items
@@ -52,7 +54,7 @@ public class ModItems {
     public static final BlockItem VERTICAL_PURPUR_SLAB = registerBlockItem(ModBlocks.VERTICAL_PURPUR_SLAB ,"vertical_purpur_slab");
     public static final BlockItem VERTICAL_PRISMARINE_SLAB = registerBlockItem(ModBlocks.VERTICAL_PRISMARINE_SLAB ,"vertical_prismarine_slab");
     public static final BlockItem VERTICAL_PRISMARINE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_PRISMARINE_BRICK_SLAB ,"vertical_prismarine_brick_slab");
-    public static final BlockItem VERTICAL_DARK_PRISMARINE__SLAB = registerBlockItem(ModBlocks.VERTICAL_DARK_PRISMARINE__SLAB ,"vertical_dark_prismarine_slab");
+    public static final BlockItem VERTICAL_DARK_PRISMARINE__SLAB = registerBlockItem(ModBlocks.VERTICAL_DARK_PRISMARINE_SLAB ,"vertical_dark_prismarine_slab");
     public static final BlockItem VERTICAL_POLISHED_GRANITE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_GRANITE_SLAB ,"vertical_polished_granite_slab");
     public static final BlockItem VERTICAL_SMOOTH_RED_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_RED_SANDSTONE_SLAB ,"vertical_smooth_red_sandstone_slab");
     public static final BlockItem VERTICAL_MOSSY_STONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_MOSSY_STONE_BRICK_SLAB ,"vertical_mossy_stone_brick_slab");
@@ -72,16 +74,19 @@ public class ModItems {
     public static final BlockItem VERTICAL_BLACKSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_BLACKSTONE_SLAB ,"vertical_blackstone_slab");
     public static final BlockItem VERTICAL_POLISHED_BLACKSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_SLAB ,"vertical_polished_blackstone_slab");
     public static final BlockItem VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_POLISHED_BLACKSTONE_BRICK_SLAB ,"vertical_polished_blackstone_brick_slab");
+    
+    public static final BlockItem VERTICAL_BAMBOO_SLAB = registerBlockItemWithFeatureFlag(ModBlocks.VERTICAL_BAMBOO_SLAB ,"vertical_bamboo_slab", FeatureFlags.UPDATE_1_20);
+    public static final BlockItem VERTICAL_BAMBOO_MOSAIC_SLAB = registerBlockItemWithFeatureFlag(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB ,"vertical_bamboo_mosaic_slab", FeatureFlags.UPDATE_1_20);
 
-    // registers all block items and puts them in building blocks
-    // public static BlockItem registerBlockItemWithLore(Block blockId ,String id) {
-    //     Item.Settings settings = new Item.Settings().group(ItemGroup.BUILDING_BLOCKS);
-    //     return Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, id), new BlockItemWithLore(blockId, settings, id));
-    // }
-
+    // registers all block items
+    // item groups are done in the ModItemGroups class
     public static BlockItem registerBlockItem(Block blockId ,String id) {
-        Item.Settings settings = new Item.Settings().group(ItemGroup.BUILDING_BLOCKS);
-        return Registry.register(Registry.ITEM, new Identifier(VerticalSlabs.MOD_ID, id), new VerticalSlabItem(blockId, settings));
+        Item.Settings settings = new Item.Settings();
+        return Registry.register(Registries.ITEM, new Identifier(VerticalSlabs.MOD_ID, id), new VerticalSlabItem(blockId, settings));
+    }
+    public static BlockItem registerBlockItemWithFeatureFlag(Block blockId ,String id, FeatureFlag featureFlag) {
+        Item.Settings settings = new Item.Settings().requires(featureFlag);
+        return Registry.register(Registries.ITEM, new Identifier(VerticalSlabs.MOD_ID, id), new VerticalSlabItem(blockId, settings));
     }
 
     public static void registerItems(){

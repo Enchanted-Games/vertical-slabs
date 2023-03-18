@@ -158,9 +158,8 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
  
     @Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
-		return this.getDefaultState().with(Properties.HORIZONTAL_FACING, ctx.getPlayerFacing());
+		return this.getDefaultState().with(Properties.HORIZONTAL_FACING, ctx.getHorizontalPlayerFacing());
 	}
-	
 
     @Override
     public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
