@@ -13,5 +13,3 @@ The seperating will make the mod easier to maintain and also fixes some issues w
 **[Enchanted Vertical Slabs - BetterEnd Edition](https://github.com/Enchanted-Games/vertical-slabs-betterend)** 
 > BetterEnd Edition is a seperate mod that adds vertical slabs for the BetterEnd mod.
 
-You do not need the main mod istalled though it is recommended. You must install BetterEnd alongside *Enchanted Vertical Slabs - BetterEnd Edition* otherwise the vertical slabs will not show up correctly.
-
