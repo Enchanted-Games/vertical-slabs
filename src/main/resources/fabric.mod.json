@@ -1,10 +1,10 @@
 {
     "schemaVersion": 1,
     "id": "enchanted-vertical-slabs",
-    "version": "1.7.1",
+    "version": "1.8.1",
 
     "name": "Enchanted Vertical Slabs",
-    "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.7: \n  - Update to 1.19.3 \n  - Slabs now show near blocks of the same material in the creative menu \n  - Added 1.20 slabs (enable the update_1_20 data pack)\n\nNew in v1.7.1: \n  - Update to 1.19.4 \n  - Added cherry slabs",
+    "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.8: \n  - Walls and Glass Panes now connect to Vertical Slabs \n  - Update to 1.19.4 \n  - Added cherry slabs",
     "authors": ["Enchanted Games [programming]"],
     "contact": {
         "homepage": "https://verticalslabs.enchanted.games/index.html?from=mainmod",
@@ -19,12 +19,12 @@
     "entrypoints": {
         "main": ["games.enchanted.VerticalSlabs"]
     },
-    "mixins": [],
+    "mixins": ["evs.mixins.json"],
 
     "depends": {
         "fabricloader": ">=0.11.3",
         "fabric": "*",
-        "minecraft": ">=1.18",
+        "minecraft": ">=1.19.4",
         "java": ">=16"
     }
 }

@@ -9,7 +9,7 @@ import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class VerticalSlabs implements ModInitializer{
+public class VerticalSlabs implements ModInitializer {
 
     // mod id
     public static final String MOD_ID = "enchanted-vertical-slabs";
