@@ -25,6 +25,7 @@ public class ModItemGroups {
             content.addAfter(Items.ACACIA_SLAB, ModBlocks.VERTICAL_ACACIA_SLAB);
             content.addAfter(Items.DARK_OAK_SLAB, ModBlocks.VERTICAL_DARK_OAK_SLAB);
             content.addAfter(Items.MANGROVE_SLAB, ModBlocks.VERTICAL_MANGROVE_SLAB);
+            content.addAfter(Items.CHERRY_SLAB, ModBlocks.VERTICAL_CHERRY_SLAB);
             content.addAfter(Items.BAMBOO_SLAB, ModBlocks.VERTICAL_BAMBOO_SLAB);
             content.addAfter(Items.BAMBOO_MOSAIC_SLAB, ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB);
             content.addAfter(Items.CRIMSON_SLAB, ModBlocks.VERTICAL_CRIMSON_SLAB);
@@ -83,6 +84,7 @@ public class ModItemGroups {
             content.add(ModBlocks.VERTICAL_ACACIA_SLAB);
             content.add(ModBlocks.VERTICAL_DARK_OAK_SLAB);
             content.add(ModBlocks.VERTICAL_MANGROVE_SLAB);
+            content.add(ModBlocks.VERTICAL_CHERRY_SLAB);
             content.add(ModBlocks.VERTICAL_BAMBOO_SLAB);
             content.add(ModBlocks.VERTICAL_BAMBOO_MOSAIC_SLAB);
             content.add(ModBlocks.VERTICAL_CRIMSON_SLAB);
@@ -131,7 +133,6 @@ public class ModItemGroups {
             content.add(ModBlocks.VERTICAL_WAXED_EXPOSED_CUT_COPPER_SLAB);
             content.add(ModBlocks.VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB);
             content.add(ModBlocks.VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB);
-            content.add(ModBlocks.VERTICAL_PETRIFIED_OAK_SLAB);
         });
 
     }

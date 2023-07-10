@@ -2,7 +2,6 @@ package games.enchanted.registry;
 
 import net.minecraft.block.*;
 import net.minecraft.block.Oxidizable.OxidationLevel;
-import games.enchanted.VerticalSlabs;
 
 public class ModBlocks{
     // wood slabs
@@ -12,7 +11,8 @@ public class ModBlocks{
     public static final Block VERTICAL_JUNGLE_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_jungle_slab");
     public static final Block VERTICAL_ACACIA_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_acacia_slab");
     public static final Block VERTICAL_DARK_OAK_SLAB =  games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_dark_oak_slab");
-    public static final Block VERTICAL_MANGROVE_SLAB = (!VerticalSlabs.is1_18) ? games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_mangrove_slab") : null;
+    public static final Block VERTICAL_MANGROVE_SLAB = games.enchanted.shared.registerBlocks.registerVerticalWoodSlab("vertical_mangrove_slab");
+    public static final Block VERTICAL_CHERRY_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCherryWoodSlab("vertical_cherry_slab");
     public static final Block VERTICAL_CRIMSON_SLAB = games.enchanted.shared.registerBlocks.registerVerticalNetherWoodSlab("vertical_crimson_slab");
     public static final Block VERTICAL_WARPED_SLAB = games.enchanted.shared.registerBlocks.registerVerticalNetherWoodSlab("vertical_warped_slab");
 
@@ -66,7 +66,7 @@ public class ModBlocks{
     public static final Block VERTICAL_WAXED_WEATHERED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_waxed_weathered_cut_copper_slab", OxidationLevel.WEATHERED);
     public static final Block VERTICAL_WAXED_OXIDIZED_CUT_COPPER_SLAB = games.enchanted.shared.registerBlocks.registerVerticalCopperSlab("vertical_waxed_oxidized_cut_copper_slab", OxidationLevel.OXIDIZED);
     
-    public static final Block VERTICAL_MUD_BRICK_SLAB = (!VerticalSlabs.is1_18) ? games.enchanted.shared.registerBlocks.registerVerticalMudSlab("vertical_mud_brick_slab") : null;
+    public static final Block VERTICAL_MUD_BRICK_SLAB = games.enchanted.shared.registerBlocks.registerVerticalMudSlab("vertical_mud_brick_slab");
     
     public static final Block VERTICAL_BAMBOO_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBambooSlab("vertical_bamboo_slab");
     public static final Block VERTICAL_BAMBOO_MOSAIC_SLAB = games.enchanted.shared.registerBlocks.registerVerticalBambooSlab("vertical_bamboo_mosaic_slab");

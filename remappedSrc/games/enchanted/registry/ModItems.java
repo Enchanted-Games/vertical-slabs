@@ -32,7 +32,8 @@ public class ModItems {
     public static final BlockItem VERTICAL_JUNGLE_SLAB = registerBlockItem(ModBlocks.VERTICAL_JUNGLE_SLAB ,"vertical_jungle_slab");
     public static final BlockItem VERTICAL_ACACIA_SLAB = registerBlockItem(ModBlocks.VERTICAL_ACACIA_SLAB ,"vertical_acacia_slab");
     public static final BlockItem VERTICAL_DARK_OAK_SLAB = registerBlockItem(ModBlocks.VERTICAL_DARK_OAK_SLAB ,"vertical_dark_oak_slab");
-    public static final BlockItem VERTICAL_MANGROVE_SLAB = (!VerticalSlabs.is1_18) ? registerBlockItem(ModBlocks.VERTICAL_MANGROVE_SLAB ,"vertical_mangrove_slab") : null;
+    public static final BlockItem VERTICAL_MANGROVE_SLAB = registerBlockItem(ModBlocks.VERTICAL_MANGROVE_SLAB ,"vertical_mangrove_slab");
+    public static final BlockItem VERTICAL_CHERRY_SLAB = registerBlockItem(ModBlocks.VERTICAL_CHERRY_SLAB ,"vertical_cherry_slab");
     public static final BlockItem VERTICAL_CRIMSON_SLAB = registerBlockItem(ModBlocks.VERTICAL_CRIMSON_SLAB ,"vertical_crimson_slab");
     public static final BlockItem VERTICAL_WARPED_SLAB = registerBlockItem(ModBlocks.VERTICAL_WARPED_SLAB ,"vertical_warped_slab");
     
@@ -46,7 +47,7 @@ public class ModItems {
     public static final BlockItem VERTICAL_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_BRICK_SLAB ,"vertical_brick_slab");
     public static final BlockItem VERTICAL_STONE_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_STONE_BRICK_SLAB ,"vertical_stone_brick_slab");
     public static final BlockItem VERTICAL_NETHER_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_NETHER_BRICK_SLAB ,"vertical_nether_brick_slab");
-    public static final BlockItem VERTICAL_MUD_BRICK_SLAB = (!VerticalSlabs.is1_18) ? registerBlockItem(ModBlocks.VERTICAL_MUD_BRICK_SLAB ,"vertical_mud_brick_slab") : null;
+    public static final BlockItem VERTICAL_MUD_BRICK_SLAB = registerBlockItem(ModBlocks.VERTICAL_MUD_BRICK_SLAB ,"vertical_mud_brick_slab");
     public static final BlockItem VERTICAL_QUARTZ_SLAB = registerBlockItem(ModBlocks.VERTICAL_QUARTZ_SLAB ,"vertical_quartz_slab");
     public static final BlockItem VERTICAL_SMOOTH_QUARTZ_SLAB = registerBlockItem(ModBlocks.VERTICAL_SMOOTH_QUARTZ_SLAB ,"vertical_smooth_quartz_slab");
     public static final BlockItem VERTICAL_RED_SANDSTONE_SLAB = registerBlockItem(ModBlocks.VERTICAL_RED_SANDSTONE_SLAB ,"vertical_red_sandstone_slab");
