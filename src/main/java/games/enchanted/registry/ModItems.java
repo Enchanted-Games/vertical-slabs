@@ -11,7 +11,7 @@ import net.minecraft.registry.Registry;
 
 public class ModItems {
 	// block items
-
+	
 	// coppers
 	public static final BlockItem VERTICAL_CUT_COPPER_SLAB = registerBlockItem(ModBlocks.VERTICAL_CUT_COPPER_SLAB,
 			"vertical_cut_copper_slab");

@@ -96,20 +96,14 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
     private ActionResult combineSlab(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand,
             BlockHitResult hit) {
 
+        player.getStackInHand(hand);
         // checks if player clicked on block with same item type
-        // i know this is a bad way to do it but this is my first time
-        if (player.getAbilities().allowModifyWorld && player.getStackInHand(hand).isItemEqual(new ItemStack(this))
+        if (player.getAbilities().allowModifyWorld
+                && ItemStack.areEqual(new ItemStack(this), player.getStackInHand(hand))
                 && state.get(SINGLE)) {
 
             ActionResult RESULT = ActionResult.FAIL;
             player.getBlockX();
-            /*
-             * LOGGER.info("VERTICAL SLAB");
-             * LOGGER.info(player.getBlockX());
-             * LOGGER.info(player.getBlockY());
-             * LOGGER.info(player.getBlockZ());
-             * LOGGER.info(hit.getSide());
-             */
 
             if (state.get(SINGLE)) {
                 Direction HITSIDE = hit.getSide();

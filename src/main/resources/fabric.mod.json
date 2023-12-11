@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "enchanted-vertical-slabs",
-  "version": "1.9.1",
+  "version": "1.9.2",
 
   "name": "Enchanted Vertical Slabs",
-  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.9: \n  - Updated to 1.20\n  - Cherry and Bamboo slabs no longer need experiments to be enabled.",
+  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.9.2: \n  - Updated to 1.20.3 and 1.20.4\n\nNew in v1.9: \n  - Updated to 1.20\n  - Cherry and Bamboo slabs no longer need experiments to be enabled.",
   "authors": ["Enchanted Games [programming]"],
   "contact": {
     "homepage": "https://verticalslabs.enchanted.games/index.html?from=mainmod",
@@ -24,7 +24,7 @@
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": ">=1.20",
+    "minecraft": ">=1.20.3",
     "java": ">=16"
   }
 }
