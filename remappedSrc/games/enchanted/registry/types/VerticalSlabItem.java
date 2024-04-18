@@ -5,7 +5,7 @@ import net.minecraft.item.BlockItem;
 
 public class VerticalSlabItem extends BlockItem{
 
-    public VerticalSlabItem(Block block, Settings settings) {
+    public VerticalSlabItem(Block block, net.minecraft.item.Item.Settings settings) {
         super(block, settings);
     }
     

@@ -21,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import games.enchanted.registry.types.CombinableVerticalSlabBlock;
 
 @Mixin(WallBlock.class)
-public abstract class WallBlockMixin {
+public abstract class WallBlockMixin<R> {
     @Shadow
     abstract public BlockState getStateWith(BlockState state, boolean north, boolean east, boolean south, boolean west,
             VoxelShape aboveShape);
@@ -74,7 +74,7 @@ public abstract class WallBlockMixin {
     @Inject(at = @At("TAIL"), cancellable = true, method = "Lnet/minecraft/block/WallBlock;getStateWith(Lnet/minecraft/world/WorldView;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;ZZZZ)Lnet/minecraft/block/BlockState;")
     private BlockState getStateWith(WorldView world, BlockState state, BlockPos pos, BlockState aboveState,
             boolean north, boolean east, boolean south, boolean west,
-            CallbackInfoReturnable infor) {
+            CallbackInfoReturnable<R> infor) {
 
         VoxelShape voxelShape = aboveState.getCollisionShape(world, pos).getFace(Direction.DOWN);
         BlockState blockState = this.getStateWith(state, north, east, south, west, voxelShape);

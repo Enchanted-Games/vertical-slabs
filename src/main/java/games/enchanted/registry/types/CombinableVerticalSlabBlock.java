@@ -3,8 +3,6 @@ package games.enchanted.registry.types;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.block.*;
-import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -14,9 +12,6 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -39,9 +34,9 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
     public CombinableVerticalSlabBlock(Settings settings, SoundEvent blockSoundEvent) {
         super(settings);
 
-        setDefaultState(this.stateManager.getDefaultState().with(SINGLE, true));
-        setDefaultState(this.stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
-        this.setDefaultState((BlockState) ((BlockState) this.getDefaultState().with(Properties.WATERLOGGED, false)));
+        setDefaultState(stateManager.getDefaultState().with(SINGLE, true));
+        setDefaultState(stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
+        setDefaultState(stateManager.getDefaultState().with(Properties.WATERLOGGED, false));
 
         blockPlaceSound = blockSoundEvent;
     }
@@ -77,94 +72,36 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
         return true;
     }
 
-    @Override
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        return false;
-    }
-
-    @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos,
-            PlayerEntity player, Hand hand,
-            BlockHitResult hit) {
-
-        ActionResult ACTION;
-
-        ACTION = combineSlab(state, world, pos, player, hand, hit);
-
-        return ACTION;
-    }
-
-    private ActionResult combineSlab(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand,
-            BlockHitResult hit) {
-
-        player.getStackInHand(hand);
-        // checks if player clicked on block with same item type
-        if (player.getAbilities().allowModifyWorld
-                && ItemStack.areEqual(new ItemStack(this), player.getStackInHand(hand))
-                && state.get(SINGLE)) {
-
-            ActionResult RESULT = ActionResult.FAIL;
-            player.getBlockX();
-
-            if (state.get(SINGLE)) {
-                Direction HITSIDE = hit.getSide();
-
-                // is facing north and hit from south
-                if (state.get(FACING) == Direction.NORTH) {
-                    if (HITSIDE == Direction.SOUTH) {
-                        world.setBlockState(pos, state.with(SINGLE, false));
-                        RESULT = sucessfulPlace(player, hand, world, pos);
-                    }
-                }
-                // is facing east and hit from west
-                else if (state.get(FACING) == Direction.EAST) {
-                    if (HITSIDE == Direction.WEST) {
-                        world.setBlockState(pos, state.with(SINGLE, false));
-                        RESULT = sucessfulPlace(player, hand, world, pos);
-                    }
-                }
-                // is facing south and hit from north
-                else if (state.get(FACING) == Direction.SOUTH) {
-                    if (HITSIDE == Direction.NORTH) {
-                        world.setBlockState(pos, state.with(SINGLE, false));
-                        RESULT = sucessfulPlace(player, hand, world, pos);
-                    }
-                }
-                // is facing west and hit from east
-                else if (state.get(FACING) == Direction.WEST) {
-                    if (HITSIDE == Direction.EAST) {
-                        world.setBlockState(pos, state.with(SINGLE, false));
-                        RESULT = sucessfulPlace(player, hand, world, pos);
-                    }
-                }
-
-                else {
-
-                }
-
-            }
-
-            return RESULT;
-        } else {
-            return ActionResult.PASS;
+    protected boolean canReplace(BlockState state, ItemPlacementContext context) {
+        ItemStack itemStack = context.getStack();
+        if (!state.get(SINGLE) && !(itemStack.isOf(this.asItem()))) {
+            return false;
         }
 
-    }
+        double hitposX = context.getHitPos().x - (double)context.getBlockPos().getX();
+        double hitposZ = context.getHitPos().z - (double)context.getBlockPos().getZ();
 
-    private ActionResult sucessfulPlace(PlayerEntity player, Hand hand, World world, BlockPos pos) {
-        // checks if player is in creative and removes 1 item if not
-        boolean isInCreative = player.getAbilities().creativeMode;
-        if (!isInCreative) {
-            player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
+        Direction facingDirection = state.get(Properties.HORIZONTAL_FACING);
+        switch (facingDirection.toString()) {
+            case "north":
+                return hitposZ >= 0.5;
+            case "east":
+                return hitposX <= 0.5;
+            case "south":
+                return hitposZ <= 0.5;
+            case "west":
+                return hitposX >= 0.5;
+            default:
+                return false;
         }
-        playPlaceSound(world, pos);
-
-        // makes arm swing
-        return ActionResult.success(world.isClient);
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
+        BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos());
+        if (blockState.isOf(this)) {
+            return blockState.with(SINGLE, false).with(Properties.WATERLOGGED, false);
+        }
         return this.getDefaultState().with(Properties.HORIZONTAL_FACING, ctx.getHorizontalPlayerFacing());
     }
 

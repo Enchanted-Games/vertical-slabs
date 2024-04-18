@@ -1,9 +1,10 @@
 package games.enchanted.registry.types;
 
+import com.mojang.serialization.MapCodec;
+
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -174,15 +175,6 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
         }
         return false;
     }
-
-    @Override
-    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
-        if (state.get(SINGLE) != false) {
-            return Waterloggable.super.canFillWithFluid(world, pos, state, fluid);
-        }
-        return false;
-    }
-
     @Override
     public FluidState getFluidState(BlockState state) {
         if (state.get(Properties.WATERLOGGED).booleanValue()) {
@@ -190,6 +182,12 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
         }
         // return state.getFluidState();
         return state.getFluidState();
+    }
+
+    @Override
+    protected MapCodec<? extends CombinableVerticalSlabBlock> getCodec() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCodec'");
     }
 
 }
