@@ -1,4 +1,4 @@
-package games.enchanted.mixins;
+package games.enchanted.verticalSlabs.mixins;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import games.enchanted.registry.types.CombinableVerticalSlabBlock;
+import games.enchanted.verticalSlabs.blockTypes.CombinableVerticalSlabBlock;
 
 @Mixin(WallBlock.class)
 public abstract class WallBlockMixin<R> {

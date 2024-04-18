@@ -1,4 +1,4 @@
-package games.enchanted.registry.types;
+package games.enchanted.verticalSlabs.blockTypes;
 
 import com.mojang.serialization.MapCodec;
 
@@ -7,8 +7,6 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -17,7 +15,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implements Waterloggable {
@@ -29,21 +26,12 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
         stateManager.add(Properties.WATERLOGGED);
     }
 
-    private SoundEvent blockPlaceSound;
-
-    public CombinableVerticalSlabBlock(Settings settings, SoundEvent blockSoundEvent) {
+    public CombinableVerticalSlabBlock(Settings settings) {
         super(settings);
 
         setDefaultState(stateManager.getDefaultState().with(SINGLE, true));
         setDefaultState(stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
         setDefaultState(stateManager.getDefaultState().with(Properties.WATERLOGGED, false));
-
-        blockPlaceSound = blockSoundEvent;
-    }
-
-    public void playPlaceSound(World world, BlockPos pos) {
-        world.playSound(
-                null, pos, blockPlaceSound, SoundCategory.BLOCKS, 1f, 0.75f);
     }
 
     @Override

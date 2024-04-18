@@ -1,13 +1,13 @@
-package games.enchanted;
+package games.enchanted.verticalSlabs;
 
-import games.enchanted.registry.ModFabricRegistries;
-import games.enchanted.registry.ModItems;
-import games.enchanted.registry.ModItemGroups;
-import games.enchanted.registry.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import games.enchanted.verticalSlabs.registration.ModBlocks;
+import games.enchanted.verticalSlabs.registration.ModFabricRegistries;
+import games.enchanted.verticalSlabs.registration.ModItemGroups;
 
 public class VerticalSlabs implements ModInitializer {
 
@@ -18,11 +18,10 @@ public class VerticalSlabs implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        // calls block and item classes to register blocks and items
-        ModItems.registerItems();
+        // calls block class to register blocks and block items
         ModBlocks.registerBlocks();
 
-        // registers special properties for blocks
+        // special properties for blocks
         ModFabricRegistries.registerFlammables();
         ModFabricRegistries.registerOxidisables();
 
