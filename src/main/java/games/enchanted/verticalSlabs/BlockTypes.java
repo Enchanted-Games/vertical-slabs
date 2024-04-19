@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
-public class BlockTypes {
+public class VerticalSlabTypes {
     public static BlockAndBlockItem woodSlab(String id) {
         return registerVerticalSlab(id,2f,6f,BlockSoundGroup.WOOD);
     }
@@ -66,15 +66,22 @@ public class BlockTypes {
 		BlockItem.Settings settings = new BlockItem.Settings();
 		return Registry.register(Registries.ITEM, new Identifier(VerticalSlabs.MOD_ID, id), new BlockItem(block, settings));
     }
+    private static Block registerVerticalSlabBlock(String id, Settings blockSettings) {
+        return Registry.register(Registries.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(blockSettings));
+    }
+    private static Block registerVerticalSlabBlock(String id, Settings blockSettings, OxidationLevel oxidationLevel) {
+        return Registry.register(Registries.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new OxidizableVerticalSlab(oxidationLevel, blockSettings));
+    }
+    
     private static BlockAndBlockItem registerVerticalSlab(String id, float hardness, float resistance, BlockSoundGroup soundGroup) {
         final Settings blockSettings = AbstractBlock.Settings.create().strength(hardness, resistance).sounds(soundGroup);
-        final Block registeredBlock = Registry.register(Registries.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new CombinableVerticalSlabBlock(blockSettings));
+        final Block registeredBlock = registerVerticalSlabBlock(id, blockSettings);
         final BlockItem registeredBlockItem = registerBlockItem(id, registeredBlock);
         return new BlockAndBlockItem(registeredBlock, registeredBlockItem);
     }
     private static BlockAndBlockItem registerOxidizableVerticalSlab(String id, float hardness, float resistance, BlockSoundGroup soundGroup, OxidationLevel oxidationLevel) {
         final Settings blockSettings = AbstractBlock.Settings.create().strength(hardness, resistance).sounds(soundGroup);
-        final Block registeredBlock = Registry.register(Registries.BLOCK, new Identifier(VerticalSlabs.MOD_ID, id), new OxidizableVerticalSlab(oxidationLevel, blockSettings));
+        final Block registeredBlock = registerVerticalSlabBlock(id, blockSettings, oxidationLevel);
         final BlockItem registeredBlockItem = registerBlockItem(id, registeredBlock);
         return new BlockAndBlockItem(registeredBlock, registeredBlockItem);
     }
