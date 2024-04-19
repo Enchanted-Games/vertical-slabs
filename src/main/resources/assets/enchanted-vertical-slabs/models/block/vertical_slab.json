@@ -1,6 +1,7 @@
 {
 	"credit": "Made with Blockbench, by Enchanted Games (https://www.youtube.com/c/enchantedgames)",
 	"parent": "block/cube",
+	"useModelShape": true,
 	"textures": {
 		"particle": "all"
 	},

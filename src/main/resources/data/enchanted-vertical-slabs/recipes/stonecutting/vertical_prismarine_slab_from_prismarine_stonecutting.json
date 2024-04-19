@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:prismarine"
+  },
+  "result": "enchanted-vertical-slabs:vertical_prismarine_slab"
+}

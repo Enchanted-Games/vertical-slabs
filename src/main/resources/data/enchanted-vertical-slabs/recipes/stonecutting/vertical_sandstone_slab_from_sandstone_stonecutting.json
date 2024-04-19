@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:sandstone"
+  },
+  "result": "enchanted-vertical-slabs:vertical_sandstone_slab"
+}
