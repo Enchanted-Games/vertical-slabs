@@ -1,5 +1,7 @@
 package games.enchanted.verticalSlabs.blockTypes;
 
+import org.jetbrains.annotations.Nullable;
+
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.block.Block;
@@ -7,6 +9,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
+import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -23,8 +28,7 @@ import net.minecraft.world.WorldAccess;
 
 public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implements Waterloggable {
     public static final MapCodec<? extends CombinableVerticalSlabBlock> CODEC = createCodec(CombinableVerticalSlabBlock::new);
-    public static final BooleanProperty SINGLE = BooleanProperty.of("single_slab"
-  });
+    public static final BooleanProperty SINGLE = BooleanProperty.of("single_slab");
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
         stateManager.add(SINGLE);
@@ -102,23 +106,36 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
     }
 
     @Override
-    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
-        if( state.get(SINGLE) != false ) {
-            return Waterloggable.super.tryFillWithFluid(world, pos, state, fluidState);
-        }
-        return false;
-    }
-    @Override
     public FluidState getFluidState(BlockState state) {
         if ( state.get(Properties.WATERLOGGED).booleanValue() ) {
             return Fluids.WATER.getStill(false);
         }
         return state.getFluidState();
     }
+    
+    @Override
+    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
+        if ( state.get(SINGLE) ) {
+            return Waterloggable.super.tryFillWithFluid(world, pos, state, fluidState);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean canFillWithFluid(@Nullable PlayerEntity player, BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+        if ( state.get(SINGLE) ) {
+            return Waterloggable.super.canFillWithFluid(player, world, pos, state, fluid);
+        }
+        return false;
+    }
+    
+    @Override
+    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+        return !state.get(SINGLE);
+    }
 
     @Override
     protected MapCodec<? extends CombinableVerticalSlabBlock> getCodec() {
         return CODEC;
     }
-
 }

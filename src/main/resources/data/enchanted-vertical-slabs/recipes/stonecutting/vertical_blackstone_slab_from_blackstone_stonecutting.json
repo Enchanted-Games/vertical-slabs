@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:blackstone"
+  },
+  "result": {
+    "count": 2,
+    "id": {
+    "count": 2,
+    "id": "enchanted-vertical-slabs:vertical_blackstone_slab"
+  }
+  }
+}

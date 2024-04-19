@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench, by Enchanted Games (https://www.youtube.com/c/enchantedgames)",
+	"useModelShape": true,
 	"parent": "block/cube",
 	"textures": {
 		"particle": "all"
@@ -18,5 +19,15 @@
 			}
 		}
 	],
-	"display": {}
+	"display": {
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [1.75, -0.75, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"fixed": {
+			"translation": [0, 0, -0.5],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
 }
