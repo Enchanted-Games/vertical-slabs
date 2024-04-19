@@ -4,10 +4,10 @@
   "version": "${version}",
 
   "name": "Enchanted Vertical Slabs",
-  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.9.2: \n  - Updated to 1.20.3 and 1.20.4\n\nNew in v1.9: \n  - Updated to 1.20\n  - Cherry and Bamboo slabs no longer need experiments to be enabled.",
+  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.10: \n  - Added Stonecutter Recipes\n  - Vertical Slabs are now centered in the inventory\n  - Many bug fixes and improvements (see GitHub page for full list)",
   "authors": ["Enchanted Games [programming]"],
   "contact": {
-    "homepage": "https://verticalslabs.enchanted.games/index.html?from=mainmod",
+    "homepage": "https://enchanted.games/projects/java-mods/enchanted-vertical-slabs",
     "sources": "https://github.com/Enchanted-Games/vertical-slabs",
     "issues": "https://github.com/Enchanted-Games/vertical-slabs/issues"
   },
@@ -24,7 +24,7 @@
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": ">1.20.4",
+    "minecraft": ">=1.20.5-rc.1",
     "java": ">=16"
   }
 }
