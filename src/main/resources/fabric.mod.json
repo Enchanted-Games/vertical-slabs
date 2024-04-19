@@ -1,10 +1,20 @@
 {
   "schemaVersion": 1,
   "id": "enchanted-vertical-slabs",
-  "version": "1.9.2",
+  "version": "1.9.3",
 
   "name": "Enchanted Vertical Slabs",
-  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.9.2: \n  - Updated to 1.20.3 and 1.20.4\n\nNew in v1.9: \n  - Updated to 1.20\n  - Cherry and Bamboo slabs no longer need experiments to be enabled.",
+  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.
+New in v1.9.3: 
+  - Add stonecutting recipes
+  - Fixed issues with Waxed Copper Slabs not appearing and acting correctly
+
+New in v1.9.2: 
+  - Updated to 1.20.3 and 1.20.4
+
+New in v1.9: 
+  - Updated to 1.20
+  - Cherry and Bamboo slabs no longer need experiments to be enabled.",
   "authors": ["Enchanted Games [programming]"],
   "contact": {
     "homepage": "https://verticalslabs.enchanted.games/index.html?from=mainmod",
