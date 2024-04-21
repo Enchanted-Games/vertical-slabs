@@ -12,3 +12,6 @@ See other branches for other versions
 `gradlew vscode`
 
 `gradlew genSources` to generate Minecraft sources
+
+## License
+See main [readme](https://github.com/Enchanted-Games/vertical-slabs/blob/master/README.md)
