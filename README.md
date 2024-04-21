@@ -1,10 +1,13 @@
 # Enchanted Vertical Slabs
 A simple, vanilla-like mod that adds vertical slabs to Minecraft. They can be crafted the same way a normal slab can in a crafting table just vertically instead of horizontally. This mod is a fabric mod that requires [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) to function.
 
-Master branch - last updated for 1.20.2
-See other branches for future versions
+## version
+1-20-3-dev branch - Source for the mc 1.20.3/1.20.4 version
 
-See [Fabric Wiki](https://fabricmc.net/wiki/tutorial:setup) for more detailed explanations.
+See other branches for other versions
+
+## setup
+`gradlew`
 
 `gradlew vscode`
 
