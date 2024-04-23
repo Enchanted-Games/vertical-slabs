@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Enchanted Vertical Slabs",
-  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.10: \n  - Added Stonecutter Recipes\n  - Vertical Slabs are now centered in the inventory\n  - Many bug fixes and improvements (see GitHub page for full list)",
+  "description": "A simple, vanilla-like mod that adds Vertical Slabs to Minecraft.\nNew in v1.10: \n  - Added Stonecutter Recipes\n  - Vertical Slabs are now centered in the inventory\n  - Many bug fixes and improvements (see GitHub page for full list)\n\n New in v1.10.1: \n  - Even more bugfixes!",
   "authors": ["Enchanted Games [programming]"],
   "contact": {
     "homepage": "https://enchanted.games/projects/java-mods/enchanted-vertical-slabs",
