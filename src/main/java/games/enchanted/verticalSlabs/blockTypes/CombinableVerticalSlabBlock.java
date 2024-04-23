@@ -76,18 +76,18 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
             return true;
         }
 
-        double hitposX = context.getHitPos().x - (double)context.getBlockPos().getX();
-        double hitposZ = context.getHitPos().z - (double)context.getBlockPos().getZ();
+        double hitposX = context.getHitPos().getX() - (double)context.getBlockPos().getX();
+        double hitposZ = context.getHitPos().getZ() - (double)context.getBlockPos().getZ();
 
         Direction facingDirection = state.get(Properties.HORIZONTAL_FACING);
-        switch (facingDirection.toString()) {
-            case "north":
+        switch (facingDirection) {
+            case Direction.NORTH:
                 return hitposZ >= 0.5;
-            case "east":
+            case Direction.EAST:
                 return hitposX <= 0.5;
-            case "south":
+            case Direction.SOUTH:
                 return hitposZ <= 0.5;
-            case "west":
+            case Direction.WEST:
                 return hitposX >= 0.5;
             default:
                 return false;
@@ -96,13 +96,21 @@ public class CombinableVerticalSlabBlock extends HorizontalFacingBlock implement
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos());
-        if (blockState.isOf(this)) {
-            // if replacing a vertical slab, turn existing slab into double slab
-            return blockState.with(SINGLE, false).with(Properties.WATERLOGGED, false);
+        BlockPos blockPos = ctx.getBlockPos();
+        BlockState replacingBlockState = ctx.getWorld().getBlockState(blockPos);
+        FluidState replacingFluidState = ctx.getWorld().getFluidState(blockPos);
+
+        // if replacing a vertical slab, turn existing slab into double slab
+        if (replacingBlockState.isOf(this)) {
+            return replacingBlockState
+                .with(SINGLE, false)
+                .with(Properties.WATERLOGGED, false);
         }
+        
         // normal placement logic
-        return this.getDefaultState().with(Properties.HORIZONTAL_FACING, ctx.getHorizontalPlayerFacing());
+        return this.getDefaultState()
+            .with(Properties.HORIZONTAL_FACING, ctx.getHorizontalPlayerFacing())
+            .with(Properties.WATERLOGGED, replacingFluidState.getFluid() == Fluids.WATER);
     }
 
     @Override

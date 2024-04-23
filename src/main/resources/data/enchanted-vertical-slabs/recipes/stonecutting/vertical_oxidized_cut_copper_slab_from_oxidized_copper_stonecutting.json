@@ -1,6 +1,5 @@
 {
-  "type": "minecraft:stonecutting",
-  "count": 8,
+  "type": "minecraft:stonecutting",,
   "ingredient": {
     "item": "minecraft:oxidized_copper"
   },
