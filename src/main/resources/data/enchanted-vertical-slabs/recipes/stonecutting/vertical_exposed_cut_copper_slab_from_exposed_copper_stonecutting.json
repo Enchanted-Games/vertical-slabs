@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:stonecutting",,
+  "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:exposed_copper"
   },
